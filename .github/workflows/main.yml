@@ -19,7 +19,9 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-xetex texlive-luatex
 
       - name: Initialize TeX Live User Mode
-        run: tlmgr init-usertree
+        run: |
+          tlmgr init-usertree
+          sudo dnf texlive-babel brazil
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
