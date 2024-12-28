@@ -3,6 +3,7 @@ project:
   output-dir: web
 
 #lang: pt-BR # NOTE: This gives the error: https://github.com/Ar-Kan/meu-calculo-numerico/actions/runs/12527126226
+language: helpers/custom.yml
 strip-comments: true
 bibliography: referencias.bib
 date: last-modified

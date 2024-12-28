@@ -125,3 +125,12 @@ seguinte forma:
 ```
 
 Isso fará com que o código seja exibido em três abas, uma para cada linguagem.
+
+### Notas sobre a tradução
+
+Existem termos nativos do Quarto que podem ser traduzidos, atualmente, ao fazer a 
+build do projeto para pdf, o LaTeX quebra devido à `bugs` na instalação de pacotes
+(vide [lang: pt-BR](https://github.com/Ar-Kan/meu-calculo-numerico/actions/runs/12527126226),
+[\usepackage\[brazil\]{babel}](https://github.com/Ar-Kan/meu-calculo-numerico/actions/runs/12527055083/job/34940237796)).
+
+Por esta razão, a tradução de termos é feita manualmente no arquivo correspondente.
