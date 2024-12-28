@@ -2,7 +2,6 @@ project:
   type: book
   output-dir: web
 
-lang: pt-BR
 strip-comments: true
 bibliography: referencias.bib
 date: last-modified
@@ -97,9 +96,9 @@ format:
       - top=1.00in
       - textheight=8.25in
       #- showframe # For debugging
-    include-in-header: helpers/latex/preamble.tex
-    include-before-body: helpers/latex/first.tex
-    include-after-body: helpers/latex/backcover.tex
+#    include-in-header: helpers/latex/preamble.tex
+#    include-before-body: helpers/latex/first.tex
+#    include-after-body: helpers/latex/backcover.tex
     toc: true
     colorlinks: true
     fig-width: 5
