@@ -2,6 +2,7 @@ project:
   type: book
   output-dir: web
 
+lang: pt-BR
 strip-comments: true
 bibliography: referencias.bib
 date: last-modified
