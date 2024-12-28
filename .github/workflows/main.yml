@@ -17,12 +17,16 @@ jobs:
       
       - name: Install LaTeX (for PDF generation)
         run: |
-          choco install miktex --params "/JustMe /NoShortcuts /UseAdmin" -y
-          refreshenv
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget -q -O - https://miktex.org/download/ubuntu | sudo apt-key add -
+          echo "deb https://miktex.org/download/ubuntu focal universe" | sudo tee /etc/apt/sources.list.d/miktex.list
+          sudo apt-get update
+          sudo apt-get install -y miktex
           miktexsetup finish
           initexmf --update-fndb
-          initexmf --mklinks
-          xargs -a helpers/latex/packages miktexsetup --install
+          xargs -a helpers/latex/packages sudo miktexsetup --install
+          mpm --install=helpers/latex/packages
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
