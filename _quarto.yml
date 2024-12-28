@@ -4,7 +4,6 @@ project:
 
 strip-comments: true
 bibliography: referencias.bib
-lang: pt
 date: last-modified
 date-format: "D MMMM YYYY"
 filters:
@@ -27,7 +26,7 @@ book:
     - Arquimedes Macedo
     - REAMAT
   cover-image: jumbotron.jpg
-  repo-url: "https://github.com/reamat/CalculoNumerico"
+  repo-url: "https://github.com/Ar-Kan/meu-calculo-numerico"
   site-url: "https://www.ufrgs.br/reamat/CalculoNumerico/livro-py/main.html"
   repo-branch: master
   repo-actions: [edit, issue]
