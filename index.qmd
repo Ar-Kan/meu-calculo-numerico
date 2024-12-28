@@ -1,0 +1,32 @@
+---
+description-meta: |
+  Este livro é um projeto de escrita colaborativa de recursos educacionais abertos (REA) sobre tópicos de matemática e suas aplicações.
+---
+
+## Bem-Vindo {.unnumbered}
+
+**REAMAT** é um projeto de escrita colaborativa de recursos
+educacionais abertos (REA) sobre tópicos de matemática e suas aplicações.
+
+Nosso objetivo é de fomentar o desenvolvimento de materiais didáticos pela colaboração entre professores e alunos de universidades, institutos de educação
+e demais interessados no estudo e na aplicação da matemática nos mais diversos ramos da ciência e da tecnologia.
+
+O sucesso do projeto depende da colaboração! Participe diretamente da escrita dos recursos educacionais, dê sugestões ou avise-nos de erros e imprecisões.
+Toda a colaboração é bem-vinda. Veja como participar <a href="#">aqui</a>.
+
+Nós preparamos uma série de ações para ajudá-lo a participar. Em primeiro lugar, o acesso irrestrito aos materias pode se dar através deste site.
+
+::: {.callout-note appearance="simple"}
+Os códigos fontes e a documentação dos recursos estão disponíveis em
+<a href="https://github.com/reamat" target="_blank">repositórios GitHub</a> públicos.
+:::
+
+## Licença
+
+Nada disso estaria completo sem uma licença apropriada à colaboração. Por isso, escolhemos disponibilizar
+os materiais sob licença
+<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank"> Creative Commons Atribuição-CompartilhaIgual 3.0
+Não Adaptada (<strong>CC-BY-SA 3.0</strong>) </a>. Ou seja, você pode <strong>copiar</strong>, <strong>redistribuir</strong>,
+<strong>alterar</strong> e construir um novo material para qualquer uso,
+inclusive comercial. Leia a <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">licença</a>
+para mais informações.</p>

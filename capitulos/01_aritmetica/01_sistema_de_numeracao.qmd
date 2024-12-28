@@ -1,0 +1,53 @@
+# Representação de números e aritmética de máquina {#sec-representacao-de-numeros}
+
+Neste capítulo, abordaremos formas de representar números reais em computadores.
+Iniciamos com uma discussão sobre representação posicional e mudança de base. Então, enfatizaremos
+a representação de números com quantidade finita de dígitos, mais especificamente, as representações
+de números inteiros, ponto fixo e ponto flutuante em computadores.
+
+A representação de números e a aritmética em computadores levam aos chamados erros de arredondamento e de
+truncamento. Ao final deste capítulo, abordaremos os efeitos do erro de arredondamento na computação científica.
+
+## Sistema de numeração e mudança de base {#sec-sistema-de-numeracao-e-mudanca-de-base}
+
+Usualmente, utilizamos o sistema de numeração decimal, isto é, base 10, para representar números. Esse é um sistema de numeração
+em que a posição do algarismo indica a potência de $10$ pela qual seu valor é multiplicado.
+
+::: {.panel-tabset}
+
+### Python
+
+```python
+>>> 1*2**3 + 0*2**2 + 0*2**1 + 1*2**0 + 1*2**-1 + 0*2**-2 + 1*2**-3
+9.625
+```
+
+### Octave
+
+```octave
+>> 1*2^3 + 0*2^2 + 0*2^1 + 1*2^0 + 1*2^-1 + 0*2^-2 + 1*2^-3
+ans =  9.6250
+```
+
+### Scilab
+
+```scilab
+--> 1*2^3 + 0*2^2 + 0*2^1 + 1*2^0 + 1*2^-1 + 0*2^-2 + 1*2^-3
+ans =  9.6250
+```
+
+:::
+
+## Exercícios
+
+::: {.callout-important icon="false"}
+### Exercício
+
+Navigate to the Help file for `splm` by running `?splm` or by visiting [this link](https://usepa.github.io/spmodel/reference/splm.html) and scroll down to "Details." Examine the spatial linear model description in the Help file and relate some of the syntax used to the syntax in @eq-splm and @eq-Rpoint.
+:::
+
+::: {.callout-important icon="false" collapse="true"}
+### Resposta
+
+The form of the spatial linear model ($\mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \boldsymbol{\tau} + \boldsymbol{\epsilon}$) is the same in the Help file as the form in Equation @eq-splm. In the help file, $de$ refers to $\sigma^2_{de}$, $ie$ refers to $\sigma^2_{ie}$, and $range$ refers to $\phi$. Finally, in the help file $h$ refers to distance between observations while, in @eq-Rpoint, $\mathbf{H}$ refers to a matrix of these distances for all pairs of observations.
+:::

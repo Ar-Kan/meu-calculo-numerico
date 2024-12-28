@@ -1,0 +1,30 @@
+# Prefácio {.unnumbered}
+
+Este livro busca abordar os tópicos de um curso de introdução ao cálculo numérico moderno oferecido a estudantes de matemática, física, engenharias e outros.
+A ênfase é colocada na formulação de problemas, implementação em computador da resolução e interpretação de resultados.
+Pressupõe-se que o estudante domine conhecimentos e habilidades típicas desenvolvidas em cursos de graduação de cálculo,
+álgebra linear e equações diferenciais. Conhecimento prévio em linguagem de computadores é fortemente recomendável, embora
+apenas técnicas elementares de programação sejam realmente necessárias.
+
+Os códigos computacionais dos métodos numéricos apresentados no livro são implementados em uma abordagem didática. Isto é,
+temos o objetivo de que a implementação em linguagem computacional auxilie o leitor no aprendizado das técnicas numéricas
+apresentadas no livro. Implementações computacionais eficientes de técnicas de cálculo numérico podem ser obtidas na série de livros
+''Numerical Recipes'', veja [@numerical].
+
+## Linguagens Computacionais
+
+::: {.panel-tabset}
+
+### Python
+
+A utilização da linguagem computacional [Python](https://www.python.org/).
+
+### Octave
+
+A utilização da linguagem computacional [GNU Octave](https://www.gnu.org/software/octave/).
+
+### Scilab
+
+A utilização do software livre [Scilab](https://www.scilab.org/).
+
+:::
