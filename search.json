@@ -92,36 +92,25 @@
     ]
   },
   {
-    "objectID": "apendices/a1-starting.html",
-    "href": "apendices/a1-starting.html",
-    "title": "Appendix A — Installing R and RStudio",
+    "objectID": "apendices/a1-python.html",
+    "href": "apendices/a1-python.html",
+    "title": "Appendix A — Rápida introdução ao Python",
     "section": "",
-    "text": "A.0.1 Linux\nTo get started with R, you need to acquire your own copy. This appendix will show you how to download R as well as RStudio, a software application that makes R easier to use. You’ll go from downloading R to opening your first R session.\nBoth R and RStudio are free and easy to download.\nR comes preinstalled on many Linux systems, but you’ll want the newest version of R if yours is out of date. The CRAN website provides files to build R from source on Debian, Redhat, SUSE, and Ubuntu systems under the link “Download R for Linux.” Click the link and then follow the directory trail to the version of Linux you wish to install on. The exact installation procedure will vary depending on the Linux system you use. CRAN guides the process by grouping each set of source files with documentation or README files that explain how to install on your system.",
+    "text": "A.1 Sobre a linguagem Python\nNeste apêndice, discutiremos os principais aspectos da linguagem computacional Python que são essenciais para uma boa leitura desta versão do livro. O material aqui apresentado, é uma adaptação livre do Apêndice A de (Todos os Colaboradores 2016).\nPython é uma linguagem de programação de alto nível, interpretada e multi-paradigma. Lançada por Guido van Rossum[^Guido van Rossum, nascido em 1956, programador de computadores dos Países Baixos.] em 1991 é, atualmente, mantida de forma colaborativa e aberta.\nPara mais informações, consulte:\nPara iniciantes, recomendamos o curso EAD gratuito no site Codecademy:",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Installing R and RStudio</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Rápida introdução ao Python</span>"
     ]
   },
   {
-    "objectID": "apendices/a1-starting.html#using-r",
-    "href": "apendices/a1-starting.html#using-r",
-    "title": "Appendix A — Installing R and RStudio",
-    "section": "A.1 Using R",
-    "text": "A.1 Using R\nR isn’t a program that you can open and start using, like Microsoft Word or Internet Explorer. Instead, R is a computer language, like C, C++, or UNIX. You use R by writing commands in the R language and asking your computer to interpret them. In the old days, people ran R code in a UNIX terminal window—as if they were hackers in a movie from the 1980s. Now almost everyone uses R with an application called RStudio, and I recommend that you do, too.\n\n\n\n\n\n\nR and UNIX\n\n\n\nYou can still run R in a UNIX or BASH window by typing the command:\n$ R\nwhich opens an R interpreter. You can then do your work and close the interpreter by running q() when you are finished.\n\n\n\n\n\n\n\n\nDo I still need to download R?\n\n\n\nEven if you use RStudio, you’ll still need to download R to your computer. RStudio helps you use the version of R that lives on your computer, but it doesn’t come with a version of R on its own.",
+    "objectID": "apendices/a1-python.html#sobre-a-linguagem-python",
+    "href": "apendices/a1-python.html#sobre-a-linguagem-python",
+    "title": "Appendix A — Rápida introdução ao Python",
+    "section": "",
+    "text": "Página oficial da linguagem Python: https://www.python.org/\nComunidade Python Brasil: http://wiki.python.org.br/\n\n\n\nhttps://www.codecademy.com/learn/python\n\n\nA.1.1 Instalação e execução\nPara executar um código Python é necessário ter instalado um interpretador para a linguagem. No site oficial do Python estão disponíveis para download os interpretadores para vários sistemas operacionais, como Linux, Mac OS e Windows. Muitas distribuições de Linux (Linux Mint, Ubuntu, etc.) têm o Python no seu sistema de pacotes (incluindo documentação em várias línguas).\nAo longo do texto, assumiremos que o leitor esteja usando um computar rodando Linux. Para outros sistemas, pode ser necessário fazer algumas adaptações.\n\n\nA.1.2 Usando Python\nO uso do Python pode ser feito de três formas básicas:\n\nusando um console Python de modo iterativo;\nexecutando um código codigo.py no console Python;\nexecutando um código Python codigo.py diretamente em terminal;\n\n\n\nA.1.3 Exercício\nConsidere o seguinte pseudocódigo:\ns = \"Olá, mundo!\". (Sem imprimir na tela o resultado.)\nsaída(s). (Imprime na tela.)\nImplemente este pseudocódigo em Python:\n\nusando diretamente um console;\ndigitando seu código em um arquivo separado e executando-o no console Python com a função execfile.\ndigitando seu código em um arquivo separado e executando-o em terminal com o comando Python.\n\n\n\n\n\n\n\nResposta\n\n\n\n\n\nSeguem as soluções de cada item:\n\nNo console temos:\n&gt;&gt;&gt; s = \"Olá, mundo!\"\n&gt;&gt;&gt; print(s)\nOlá, mundo!\nPara sair do console, digite:\n&gt;&gt;&gt; quit()\nAbra o editor de texto de sua preferência e digite o código:\n#!/usr/bin/env python\n# -*- coding: utf-8 -*-\n\ns = 'Olá'\nprint(s)\nSalve o arquivo como, por exemplo, ola.py. No console Python, digite:\n&gt;&gt;&gt; execfile(\"ola.py\")\nAbra o editor de texto de sua preferência e digite o código:\n#!/usr/bin/env python\n# -*- coding: utf-8 -*-\n\ns = 'Olá'\nprint(s)\nSalve o arquivo como, por exemplo, ola.py. No terminal, digite:\n$ python ola.py",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Installing R and RStudio</span>"
-    ]
-  },
-  {
-    "objectID": "apendices/a1-starting.html#opening-r",
-    "href": "apendices/a1-starting.html#opening-r",
-    "title": "Appendix A — Installing R and RStudio",
-    "section": "A.2 Opening R",
-    "text": "A.2 Opening R\nNow that you have both R and RStudio on your computer, you can begin using R by opening the RStudio program. Open RStudio just as you would any program, by clicking on its icon or by typing “RStudio” at the Windows Run prompt.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Installing R and RStudio</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Rápida introdução ao Python</span>"
     ]
   }
 ]

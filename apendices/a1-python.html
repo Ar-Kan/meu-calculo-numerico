@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2024-12-28">
 
-<title>Appendix A — Installing R and RStudio – Meu Cálculo Numérico</title>
+<title>Appendix A — Rápida introdução ao Python – Meu Cálculo Numérico</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -75,8 +95,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4f6263ad221f763a4834f521a0a25b97.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-022d0653e62d99952369f70845bfc6e9.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-747f6828a98f640ce0736befa612b8a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-add7d06ce1cd5469bd78fb11be552c06.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -115,13 +135,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </script>
 
 
-<link rel="stylesheet" href="helpers/html/styles.css">
-<meta property="og:title" content="Appendix A — Installing R and RStudio – Meu Cálculo Numérico">
+<meta property="og:title" content="Appendix A — Rápida introdução ao Python – Meu Cálculo Numérico">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Meu Cálculo Numérico">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -130,7 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../apendices/a1-starting.html">Appendices</a></li><li class="breadcrumb-item"><a href="../apendices/a1-starting.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Installing R and RStudio</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../apendices/a1-python.html">Appendices</a></li><li class="breadcrumb-item"><a href="../apendices/a1-python.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Rápida introdução ao Python</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -234,8 +253,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../apendices/a1-starting.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Installing R and RStudio</span></span></a>
+  <a href="../apendices/a1-python.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Rápida introdução ao Python</span></span></a>
   </div>
 </li>
       </ul>
@@ -250,18 +269,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#linux" id="toc-linux" class="nav-link active" data-scroll-target="#linux"><span class="header-section-number">A.0.1</span> Linux</a></li>
-  <li><a href="#using-r" id="toc-using-r" class="nav-link" data-scroll-target="#using-r"><span class="header-section-number">A.1</span> Using R</a></li>
-  <li><a href="#opening-r" id="toc-opening-r" class="nav-link" data-scroll-target="#opening-r"><span class="header-section-number">A.2</span> Opening R</a></li>
+  <li><a href="#sobre-a-linguagem-python" id="toc-sobre-a-linguagem-python" class="nav-link active" data-scroll-target="#sobre-a-linguagem-python"><span class="header-section-number">A.1</span> Sobre a linguagem Python</a>
+  <ul class="collapse">
+  <li><a href="#instalação-e-execução" id="toc-instalação-e-execução" class="nav-link" data-scroll-target="#instalação-e-execução"><span class="header-section-number">A.1.1</span> Instalação e execução</a></li>
+  <li><a href="#usando-python" id="toc-usando-python" class="nav-link" data-scroll-target="#usando-python"><span class="header-section-number">A.1.2</span> Usando Python</a></li>
+  <li><a href="#exercício" id="toc-exercício" class="nav-link" data-scroll-target="#exercício"><span class="header-section-number">A.1.3</span> Exercício</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Ar-Kan/meu-calculo-numerico/edit/master/apendices/a1-starting.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Ar-Kan/meu-calculo-numerico/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Ar-Kan/meu-calculo-numerico/edit/master/apendices/a1-python.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Ar-Kan/meu-calculo-numerico/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../apendices/a1-starting.html">Appendices</a></li><li class="breadcrumb-item"><a href="../apendices/a1-starting.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Installing R and RStudio</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../apendices/a1-python.html">Appendices</a></li><li class="breadcrumb-item"><a href="../apendices/a1-python.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Rápida introdução ao Python</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-appendix-starting" class="quarto-section-identifier">Appendix A — Installing R and RStudio</span></h1>
+<h1 class="title"><span id="sec-appendix-starting" class="quarto-section-identifier">Appendix A — Rápida introdução ao Python</span></h1>
 </div>
 
 
@@ -284,76 +306,90 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>To get started with R, you need to acquire your own copy. This appendix will show you how to download R as well as RStudio, a software application that makes R easier to use. You’ll go from downloading R to opening your first R session.</p>
-<p>Both R and RStudio are free and easy to download.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>Neste apêndice, discutiremos os principais aspectos da linguagem computacional Python que são essenciais para uma boa leitura desta versão do livro. O material aqui apresentado, é uma adaptação livre do Apêndice A de <span class="citation" data-cites="CALSCI">(<a href="#ref-CALSCI" role="doc-biblioref">Todos os Colaboradores 2016</a>)</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-CALSCI" class="csl-entry" role="listitem">
+Todos os Colaboradores. 2016. <span>“Cálculo Numérico - Um Livro Colaborativo - Versão Com Scilab.”</span>
+</div></div><section id="sobre-a-linguagem-python" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="sobre-a-linguagem-python"><span class="header-section-number">A.1</span> Sobre a linguagem Python</h2>
+<p><a href="https://www.python.org/">Python</a> é uma linguagem de programação de alto nível, interpretada e multi-paradigma. Lançada por <a href="https://gvanrossum.github.io//">Guido van Rossum</a>[^Guido van Rossum, nascido em 1956, programador de computadores dos Países Baixos.] em 1991 é, atualmente, mantida de forma colaborativa e aberta.</p>
+<p>Para mais informações, consulte:</p>
+<ul>
+<li>Página oficial da linguagem Python: https://www.python.org/</li>
+<li>Comunidade Python Brasil: http://wiki.python.org.br/</li>
+</ul>
+<p>Para iniciantes, recomendamos o curso EAD gratuito no site <a href="https://www.codecademy.com/">Codecademy</a>:</p>
+<div data-align="center">
+<p><a href="https://www.codecademy.com/learn/python">https://www.codecademy.com/learn/python</a></p>
 </div>
-<div class="callout-title-container flex-fill">
-Binaries Versus Source
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>R can be installed from precompiled binaries or built from source on any operating system. For Windows and Mac machines, installing R from binaries is extremely easy. The binary comes preloaded in its own installer. Although you can build R from source on these platforms, the process is much more complicated and won’t provide much benefit for most users. For Linux systems, the opposite is true. Precompiled binaries can be found for some systems, but it is much more common to build R from source files when installing on Linux. The download pages on <a href="http://cran.r-project.org">CRAN’s website</a> provide information about building R from source for the Windows, Mac, and Linux platforms.</p>
-</div>
-</div>
-<section id="linux" class="level3" data-number="A.0.1">
-<h3 data-number="A.0.1" class="anchored" data-anchor-id="linux"><span class="header-section-number">A.0.1</span> Linux</h3>
-<p>R comes preinstalled on many Linux systems, but you’ll want the newest version of R if yours is out of date. <a href="http://cran.r-project.org">The CRAN website</a> provides files to build R from source on Debian, Redhat, SUSE, and Ubuntu systems under the link “Download R for Linux.” Click the link and then follow the directory trail to the version of Linux you wish to install on. The exact installation procedure will vary depending on the Linux system you use. CRAN guides the process by grouping each set of source files with documentation or README files that explain how to install on your system.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-32-bit Versus 64-bit
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>R comes in both 32-bit and 64-bit versions. Which should you use? In most cases, it won’t matter. Both versions use 32-bit integers, which means they compute numbers to the same numerical precision. The difference occurs in the way each version manages memory. 64-bit R uses 64-bit memory pointers, and 32-bit R uses 32-bit memory pointers. This means 64-bit R has a larger memory space to use (and search through).</p>
-<p>As a rule of thumb, 32-bit builds of R are faster than 64-bit builds, though not always. On the other hand, 64-bit builds can handle larger files and data sets with fewer memory management problems. In either version, the maximum allowable vector size tops out at around 2 billion elements. If your operating system doesn’t support 64-bit programs, or your RAM is less than 4 GB, 32-bit R is for you. The Windows and Mac installers will automatically install both versions if your system supports 64-bit R.</p>
-</div>
-</div>
+<section id="instalação-e-execução" class="level3" data-number="A.1.1">
+<h3 data-number="A.1.1" class="anchored" data-anchor-id="instalação-e-execução"><span class="header-section-number">A.1.1</span> Instalação e execução</h3>
+<p>Para executar um código Python é necessário ter instalado um interpretador para a linguagem. No <a href="https://www.python.org/">site oficial do Python</a> estão disponíveis para <em>download</em> os interpretadores para vários sistemas operacionais, como Linux, Mac OS e Windows. Muitas distribuições de Linux (Linux Mint, Ubuntu, etc.) têm o Python no seu sistema de pacotes (incluindo documentação em várias línguas).</p>
+<p>Ao longo do texto, assumiremos que o leitor esteja usando um computar rodando Linux. Para outros sistemas, pode ser necessário fazer algumas adaptações.</p>
 </section>
-<section id="using-r" class="level2" data-number="A.1">
-<h2 data-number="A.1" class="anchored" data-anchor-id="using-r"><span class="header-section-number">A.1</span> Using R</h2>
-<p>R isn’t a program that you can open and start using, like Microsoft Word or Internet Explorer. Instead, R is a computer language, like C, C++, or UNIX. You use R by writing commands in the R language and asking your computer to interpret them. In the old days, people ran R code in a UNIX terminal window—as if they were hackers in a movie from the 1980s. Now almost everyone uses R with an application called RStudio, and I recommend that you do, too.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-R and UNIX
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can still run R in a UNIX or BASH window by typing the command:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>which opens an R interpreter. You can then do your work and close the interpreter by running <code>q()</code> when you are finished.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Do I still need to download R?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Even if you use RStudio, you’ll still need to download R to your computer. RStudio helps you use the version of R that lives on your computer, but it doesn’t come with a version of R on its own.</p>
-</div>
-</div>
+<section id="usando-python" class="level3" data-number="A.1.2">
+<h3 data-number="A.1.2" class="anchored" data-anchor-id="usando-python"><span class="header-section-number">A.1.2</span> Usando Python</h3>
+<p>O uso do Python pode ser feito de três formas básicas:</p>
+<ul>
+<li>usando um <code>console Python</code> de modo iterativo;</li>
+<li>executando um código codigo.py no console Python;</li>
+<li>executando um código Python <code>codigo.py</code> diretamente em terminal;</li>
+</ul>
 </section>
-<section id="opening-r" class="level2" data-number="A.2">
-<h2 data-number="A.2" class="anchored" data-anchor-id="opening-r"><span class="header-section-number">A.2</span> Opening R</h2>
-<p>Now that you have both R and RStudio on your computer, you can begin using R by opening the RStudio program. Open RStudio just as you would any program, by clicking on its icon or by typing “RStudio” at the Windows Run prompt.</p>
+<section id="exercício" class="level3" data-number="A.1.3">
+<h3 data-number="A.1.3" class="anchored" data-anchor-id="exercício"><span class="header-section-number">A.1.3</span> Exercício</h3>
+<p>Considere o seguinte pseudocódigo:</p>
+<pre><code>s = "Olá, mundo!". (Sem imprimir na tela o resultado.)
+saída(s). (Imprime na tela.)</code></pre>
+<p>Implemente este pseudocódigo em Python:</p>
+<ol type="a">
+<li>usando diretamente um console;</li>
+<li>digitando seu código em um arquivo separado e executando-o no console Python com a função <code>execfile</code>.</li>
+<li>digitando seu código em um arquivo separado e executando-o em terminal com o comando Python.</li>
+</ol>
+<div class="mt-0 callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Resposta
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Seguem as soluções de cada item:</p>
+<ol type="a">
+<li><p>No console temos:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> <span class="st">"Olá, mundo!"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(s)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Olá, mundo<span class="op">!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para sair do console, digite:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> quit()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Abra o editor de texto de sua preferência e digite o código:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'Olá'</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Salve o arquivo como, por exemplo, <code>ola.py</code>. No console Python, digite:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">execfile</span>(<span class="st">"ola.py"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Abra o editor de texto de sua preferência e digite o código:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'Olá'</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Salve o arquivo como, por exemplo, <code>ola.py</code>. No terminal, digite:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python ola.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+</div>
+</div>
+</div>
 
 
+
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -940,7 +976,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Ar-Kan/meu-calculo-numerico/edit/master/apendices/a1-starting.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Ar-Kan/meu-calculo-numerico/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Ar-Kan/meu-calculo-numerico/edit/master/apendices/a1-python.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Ar-Kan/meu-calculo-numerico/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Este livro foi criado com <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
