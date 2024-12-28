@@ -1,0 +1,11 @@
+Package: meuCalculoNumerico
+Type: Book
+Title: Meu Cálculo Numérico
+Version: 0.0.1
+Imports:
+  emo,
+  git2r,
+  sessioninfo,
+  rmarkdown
+Remotes:
+  hadley/emo
