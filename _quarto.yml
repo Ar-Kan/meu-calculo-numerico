@@ -4,7 +4,7 @@ project:
 
 strip-comments: true
 bibliography: referencias.bib
-lang: pt-BR
+lang: pt
 date: last-modified
 date-format: "D MMMM YYYY"
 filters:
