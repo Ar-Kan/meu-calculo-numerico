@@ -14,33 +14,38 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      
-      - name: Install LaTeX (for PDF generation)
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-xetex texlive-luatex
-          sudo tlmgr init-usertree
-          sudo tlmgr update --self --all --list
-          xargs -a helpers/latex/packages sudo tlmgr install
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Render Quarto project
-        run: quarto render
-
-      - name: Deploy to GitHub Pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Configure Git
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # To install LaTeX to build PDF book
+          tinytex: true
 
-          # Commit and push to the gh-pages branch
-          git checkout --orphan gh-pages
-          git reset
-          git add web
-          git commit -m "Deploy Quarto site"
-          git push --force origin gh-pages
+      # NOTE: If Publishing to GitHub Pages, set the permissions correctly (see top of this yaml)
+      - name: Publish to GitHub Pages (and render)
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+
+#      - name: Render Quarto project
+#        run: quarto render
+#
+#      - name: Deploy to GitHub Pages
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        run: |
+#          # Configure Git
+#          git config --global user.name "github-actions[bot]"
+#          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+#
+#          # Commit and push to the gh-pages branch
+#          git checkout --orphan gh-pages
+#          git reset
+#          git add web
+#          git commit -m "Deploy Quarto site"
+#          git push --force origin gh-pages
     
