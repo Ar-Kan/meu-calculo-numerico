@@ -2,6 +2,7 @@ project:
   type: book
   output-dir: web
 
+#lang: pt-BR # NOTE: This gives the error: https://github.com/Ar-Kan/meu-calculo-numerico/actions/runs/12527126226
 strip-comments: true
 bibliography: referencias.bib
 date: last-modified
@@ -53,7 +54,7 @@ book:
       chapters:
         - capitulos/01_aritmetica/01_sistema_de_numeracao.qmd
   appendices:
-    - apendices/a1-starting.qmd
+    - apendices/a1-python.qmd
 
 format:
   html:
@@ -72,12 +73,15 @@ format:
     citation-location: margin
     toc-location: right
     toc-expand: true
-    css: helpers/html/styles.css
     theme:
       light:
         - flatly
+        - helpers/html/styles.scss
+        - helpers/html/light.scss
       dark:
         - darkly
+        - helpers/html/styles.scss
+        - helpers/html/dark.scss
     fig-width: 5
     fig-height: 5
     fig-align: center

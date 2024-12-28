@@ -1,0 +1,102 @@
+# Rápida introdução ao Python {#sec-appendix-starting}
+Neste apêndice, discutiremos os principais aspectos da linguagem computacional Python que são essenciais para uma
+boa leitura desta versão do livro. O material aqui apresentado, é uma adaptação livre do Apêndice A de [@CALSCI].
+
+## Sobre a linguagem Python
+
+[Python](https://www.python.org/) é uma linguagem de programação de alto nível, interpretada e multi-paradigma.
+Lançada por [Guido van Rossum](https://gvanrossum.github.io//)[^Guido van Rossum, nascido em 1956, programador de computadores dos Países Baixos.] em 1991 é, atualmente, mantida de forma colaborativa e aberta.
+
+Para mais informações, consulte:
+
+- Página oficial da linguagem Python: https://www.python.org/
+- Comunidade Python Brasil: http://wiki.python.org.br/
+
+Para iniciantes, recomendamos o curso EAD gratuito no site [Codecademy](https://www.codecademy.com/):
+
+<div align="center">
+[https://www.codecademy.com/learn/python](https://www.codecademy.com/learn/python)
+</div>
+
+### Instalação e execução
+
+Para executar um código Python é necessário ter instalado um interpretador para a linguagem.
+No [site oficial do Python](https://www.python.org/) estão disponíveis para _download_ os interpretadores para vários sistemas
+operacionais, como Linux, Mac OS e Windows. Muitas distribuições de Linux (Linux Mint, Ubuntu, etc.)
+têm o Python no seu sistema de pacotes (incluindo documentação em várias línguas).
+
+Ao longo do texto, assumiremos que o leitor esteja usando um computar rodando Linux. Para outros sistemas,
+pode ser necessário fazer algumas adaptações.
+
+### Usando Python
+
+O uso do Python pode ser feito de três formas básicas:
+
+- usando um `console Python` de modo iterativo;
+- executando um código codigo.py no console Python;
+- executando um código Python `codigo.py` diretamente em terminal;
+
+### Exercício
+
+Considere o seguinte pseudocódigo:
+
+```
+s = "Olá, mundo!". (Sem imprimir na tela o resultado.)
+saída(s). (Imprime na tela.)
+```
+
+Implemente este pseudocódigo em Python:
+
+a) usando diretamente um console;
+a) digitando seu código em um arquivo separado e executando-o no console Python com a função `execfile`.
+a) digitando seu código em um arquivo separado e executando-o em terminal com o comando Python.
+
+::: {.callout-warning .mt-0 collapse="true"}
+### Resposta
+
+Seguem as soluções de cada item:
+
+a) No console temos:
+
+      ```python
+      >>> s = "Olá, mundo!"
+      >>> print(s)
+      Olá, mundo!
+      ```
+
+      Para sair do console, digite:
+
+      ```python
+      >>> quit()
+      ```
+a) Abra o editor de texto de sua preferência e digite o código:
+
+      ```python
+      #!/usr/bin/env python
+      # -*- coding: utf-8 -*-
+
+      s = 'Olá'
+      print(s)
+      ```
+
+      Salve o arquivo como, por exemplo, `ola.py`. No console Python, digite:
+
+      ```python
+      >>> execfile("ola.py")
+      ```
+a) Abra o editor de texto de sua preferência e digite o código:
+
+      ```python
+      #!/usr/bin/env python
+      # -*- coding: utf-8 -*-
+
+      s = 'Olá'
+      print(s)
+      ```
+
+      Salve o arquivo como, por exemplo, `ola.py`. No terminal, digite:
+
+      ```bash
+      $ python ola.py
+      ```
+:::

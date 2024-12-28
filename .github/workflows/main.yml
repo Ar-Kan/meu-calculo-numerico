@@ -25,7 +25,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # To install LaTeX to build PDF book
+          # NOTE 1: To install LaTeX to build PDF book
           tinytex: true
 
       # NOTE 1: If Publishing to GitHub Pages, set the permissions correctly (see top of this yaml)
@@ -36,22 +36,3 @@ jobs:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
-
-#      - name: Render Quarto project
-#        run: quarto render
-#
-#      - name: Deploy to GitHub Pages
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        run: |
-#          # Configure Git
-#          git config --global user.name "github-actions[bot]"
-#          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-#
-#          # Commit and push to the gh-pages branch
-#          git checkout --orphan gh-pages
-#          git reset
-#          git add web
-#          git commit -m "Deploy Quarto site"
-#          git push --force origin gh-pages
-    
