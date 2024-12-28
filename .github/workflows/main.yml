@@ -18,15 +18,10 @@ jobs:
       - name: Install LaTeX (for PDF generation)
         run: |
           sudo apt-get update
-          sudo apt-get install -y curl 
-          curl -fsSL https://miktex.org/download/key | sudo tee /usr/share/keyrings/miktex-keyring.asc > /dev/null
-          echo "deb [signed-by=/usr/share/keyrings/miktex-keyring.asc] https://miktex.org/download/ubuntu jammy universe" | sudo tee /etc/apt/sources.list.d/miktex.list
-          sudo apt-get update
-          sudo apt-get install -y miktex
-          miktexsetup finish
-          initexmf --update-fndb
-          xargs -a helpers/latex/packages sudo miktexsetup --install
-          mpm --install=helpers/latex/packages
+          sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-xetex texlive-luatex
+          sudo tlmgr init-usertree
+          sudo tlmgr update --self --all --list
+          xargs -a helpers/latex/packages sudo tlmgr install
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
