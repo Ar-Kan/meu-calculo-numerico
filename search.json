@@ -1,0 +1,127 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Meu Cálculo Numérico",
+    "section": "",
+    "text": "Bem-Vindo\nREAMAT é um projeto de escrita colaborativa de recursos educacionais abertos (REA) sobre tópicos de matemática e suas aplicações.\nNosso objetivo é de fomentar o desenvolvimento de materiais didáticos pela colaboração entre professores e alunos de universidades, institutos de educação e demais interessados no estudo e na aplicação da matemática nos mais diversos ramos da ciência e da tecnologia.\nO sucesso do projeto depende da colaboração! Participe diretamente da escrita dos recursos educacionais, dê sugestões ou avise-nos de erros e imprecisões. Toda a colaboração é bem-vinda. Veja como participar aqui.\nNós preparamos uma série de ações para ajudá-lo a participar. Em primeiro lugar, o acesso irrestrito aos materias pode se dar através deste site.",
+    "crumbs": [
+      "Bem-Vindo"
+    ]
+  },
+  {
+    "objectID": "index.html#bem-vindo",
+    "href": "index.html#bem-vindo",
+    "title": "Meu Cálculo Numérico",
+    "section": "",
+    "text": "Os códigos fontes e a documentação dos recursos estão disponíveis em repositórios GitHub públicos.",
+    "crumbs": [
+      "Bem-Vindo"
+    ]
+  },
+  {
+    "objectID": "index.html#licença",
+    "href": "index.html#licença",
+    "title": "Meu Cálculo Numérico",
+    "section": "Licença",
+    "text": "Licença\nNada disso estaria completo sem uma licença apropriada à colaboração. Por isso, escolhemos disponibilizar os materiais sob licença  Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada (CC-BY-SA 3.0) . Ou seja, você pode copiar, redistribuir, alterar e construir um novo material para qualquer uso, inclusive comercial. Leia a licença para mais informações.",
+    "crumbs": [
+      "Bem-Vindo"
+    ]
+  },
+  {
+    "objectID": "prefacio.html",
+    "href": "prefacio.html",
+    "title": "Prefácio",
+    "section": "",
+    "text": "Linguagens Computacionais\nEste livro busca abordar os tópicos de um curso de introdução ao cálculo numérico moderno oferecido a estudantes de matemática, física, engenharias e outros. A ênfase é colocada na formulação de problemas, implementação em computador da resolução e interpretação de resultados. Pressupõe-se que o estudante domine conhecimentos e habilidades típicas desenvolvidas em cursos de graduação de cálculo, álgebra linear e equações diferenciais. Conhecimento prévio em linguagem de computadores é fortemente recomendável, embora apenas técnicas elementares de programação sejam realmente necessárias.\nOs códigos computacionais dos métodos numéricos apresentados no livro são implementados em uma abordagem didática. Isto é, temos o objetivo de que a implementação em linguagem computacional auxilie o leitor no aprendizado das técnicas numéricas apresentadas no livro. Implementações computacionais eficientes de técnicas de cálculo numérico podem ser obtidas na série de livros ‘’Numerical Recipes’’, veja (Press 2007).",
+    "crumbs": [
+      "Prefácio"
+    ]
+  },
+  {
+    "objectID": "prefacio.html#linguagens-computacionais",
+    "href": "prefacio.html#linguagens-computacionais",
+    "title": "Prefácio",
+    "section": "",
+    "text": "PythonOctaveScilab\n\n\nA utilização da linguagem computacional Python.\n\n\nA utilização da linguagem computacional GNU Octave.\n\n\nA utilização do software livre Scilab.",
+    "crumbs": [
+      "Prefácio"
+    ]
+  },
+  {
+    "objectID": "introducao.html",
+    "href": "introducao.html",
+    "title": "Introdução",
+    "section": "",
+    "text": "Cálculo numérico é a disciplina que estuda as técnicas para a solução aproximada de problemas matemáticos. Estas técnicas são de natureza analítica e computacional. As principais preocupações normalmente envolvem exatidão e desempenho.\nAliado ao aumento contínuo da capacidade de computação disponível, o desenvolvimento de métodos numéricos tornou a simulação computacional de problemas matemáticos uma prática usual nas mais diversas áreas científicas e tecnológicas. As então chamadas simulações numéricas são constituídas de um arranjo de vários esquemas numéricos dedicados a resolver problemas específicos como, por exemplo: resolver equações algébricas, resolver sistemas de equações lineares, interpolar e ajustar pontos, calcular derivadas e integrais, resolver equações diferenciais ordinárias, etc. Neste livro, abordamos o desenvolvimento, a implementação, a utilização e os aspectos teóricos de métodos numéricos para a resolução desses problemas.\nTrabalharemos com problemas que abordam aspectos teóricos e de utilização dos métodos estudados, bem como com problemas de interesse na engenharia, na física e na matemática aplicada.\nA necessidade de aplicar aproximações numéricas decorre do fato de que esses problemas podem se mostrar intratáveis se dispomos apenas de meios puramente analíticos, como aqueles estudados nos cursos de cálculo e álgebra linear. Por exemplo, o teorema de Abel-Ruffini nos garante que não existe uma fórmula algébrica, isto é, envolvendo apenas operações aritméticas e radicais, para calcular as raízes de uma equação polinomial de qualquer grau, mas apenas casos particulares:\n\nSimplesmente isolar a incógnita para encontrar a raiz de uma equação do primeiro grau;\nFórmula de Bhaskara para encontrar raízes de uma equação do segundo grau;\nFórmula de Cardano para encontrar raízes de uma equação do terceiro grau;\nExiste expressão para equações de quarto grau;\nCasos simplificados de equações de grau maior que 4 onde alguns coeficientes são nulos também podem ser resolvidos.\n\nEquações não polinomiais podem ser ainda mais complicadas de resolver exatamente, por exemplo:\n\\[\n\\cos(x) = x \\quad \\text{ou} \\quad xe^x = 10\n\\tag{1}\\]\nPara resolver o problema de valor inicial:\n\\[\n\\begin{aligned}\ny' + xy &= x, \\\\\ny(0) &= 2,\n\\end{aligned}\n\\tag{2}\\]\npodemos usar o método de fator integrante e obtemos \\(y = 1 + e^{-x^2/2}\\). No entanto, não parece possível encontrar uma expressão fechada em termos de funções elementares para a solução exata do problema de valor inicial dado por:\n\\[\n\\begin{aligned}\ny' + xy &= e^{-y}, \\\\\ny(0) &= 2.\n\\end{aligned}\n\\tag{3}\\]\nDa mesma forma, resolvemos a integral:\n\\[\n\\int_1^2 x e^{-x^2} dx\n\\tag{4}\\]\npelo método da substituição e obtemos \\(\\frac{1}{2}(e^{-1} - e^{-4})\\). Porém a integral:\n\\[\n\\int_1^2 e^{-x^2} dx\n\\tag{5}\\]\nnão pode ser expressa analiticamente em termos de funções elementares, como uma consequência do teorema de Liouville.\nA maioria dos problemas envolvendo fenômenos reais produzem modelos matemáticos cuja solução analítica é difícil (ou impossível) de obter, mesmo quando provamos que a solução existe. Nesse curso propomos calcular aproximações numéricas para esses problemas, que apesar de, em geral, serem diferentes da solução exata, mostraremos que elas podem ser bem próximas.\nPara entender a construção de aproximações é necessário estudar como funciona a aritmética implementada nos computadores e erros de arredondamento. Como computadores, em geral, usam uma base binária para representar números, começaremos falando em mudança de base.",
+    "crumbs": [
+      "Introdução"
+    ]
+  },
+  {
+    "objectID": "capitulos/01_aritmetica/00_capitulo.html",
+    "href": "capitulos/01_aritmetica/00_capitulo.html",
+    "title": "Capítulo 1: Representação de números e aritmética de máquina",
+    "section": "",
+    "text": "Neste capítulo, abordaremos formas de representar números reais em computadores. Iniciamos com uma discussão sobre representação posicional e mudança de base. Então, enfatizaremos a representação de números com quantidade finita de dígitos, mais especificamente, as representações de números inteiros, ponto fixo e ponto flutuante em computadores.\nA representação de números e a aritmética em computadores levam aos chamados erros de arredondamento e de truncamento. Ao final deste capítulo, abordaremos os efeitos do erro de arredondamento na computação científica.",
+    "crumbs": [
+      "Capítulo 1: Representação de números e aritmética de máquina"
+    ]
+  },
+  {
+    "objectID": "capitulos/01_aritmetica/01_sistema_de_numeracao.html",
+    "href": "capitulos/01_aritmetica/01_sistema_de_numeracao.html",
+    "title": "1  Sistema de numeração e mudança de base",
+    "section": "",
+    "text": "1.0.1 Sistema de numeração de base \\(b\\)\nUsualmente, utilizamos o sistema de numeração decimal, isto é, base 10, para representar números. Esse é um sistema de numeração em que a posição do algarismo indica a potência de \\(10\\) pela qual seu valor é multiplicado.\nO sistema de numeração posicional também pode ser usado com outras bases. Vejamos a seguinte definição.\nDado um número natural \\(b&gt;1\\) e o conjunto de símbolos \\(\\pmb{\\pm},  \\pmb{0}, \\pmb{1}, \\pmb{2},\\dotsc, \\pmb{b-1}\\) 1, a sequência de símbolos\n\\[\n  \\left(d_nd_{n-1} \\cdots d_1d_0,d_{-1}d_{-2} \\cdots \\right)_b\n\\]\nrepresenta o número positivo\n\\[\n  d_n\\cdot b^n + d_{n-1}\\cdot b^{n-1} + \\cdots + d_0\\cdot b^0 + d_{-1}\\cdot b^{-1}+d_{-2}\\cdot b^{-2} + \\cdots\n\\]\nPara representar números negativos usamos o símbolo \\(-\\) à esquerda do numeral2.",
+    "crumbs": [
+      "Capítulo 1: Representação de números e aritmética de máquina",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sistema de numeração e mudança de base</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/01_aritmetica/01_sistema_de_numeracao.html#exercícios",
+    "href": "capitulos/01_aritmetica/01_sistema_de_numeracao.html#exercícios",
+    "title": "1  Sistema de numeração e mudança de base",
+    "section": "1.1 Exercícios",
+    "text": "1.1 Exercícios\n\n1.1.1 Exercício\nEscreva cada número dado para a base \\(b\\).\n\n\\((45,1)_8\\) para a base \\(b=2\\)\n\\((21,2)_8\\) para a base \\(b=16\\)\n\\((1001,101)_2\\) para a base \\(b=8\\)\n\\((1001,101)_2\\) para a base \\(b=16\\)\n\n\n\n\n\n\n\nResposta\n\n\n\n\n\n\n~\\((100101,001)_2\\)\n~\\((11,4)_{16}\\)\n~\\((11,5)_8\\)\n~\\((9,A)_{16}\\)\n\n\n\n\n\n\n1.1.2 Exercício\nQuantos algarismos são necessários para representar o número \\(937163832173947\\) em base binária? E em base 7?\n\n\n\n\n\n\nDica\n\n\n\nQual é o menor e o maior inteiro que pode ser escrito em dada base com \\(N\\) algarismos?\n\n\n\n\n\n\n\n\nResposta\n\n\n\n\n\n\\(50\\); \\(18\\).",
+    "crumbs": [
+      "Capítulo 1: Representação de números e aritmética de máquina",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sistema de numeração e mudança de base</span>"
+    ]
+  },
+  {
+    "objectID": "apendices/a1-starting.html",
+    "href": "apendices/a1-starting.html",
+    "title": "Appendix A — Installing R and RStudio",
+    "section": "",
+    "text": "A.0.1 Linux\nTo get started with R, you need to acquire your own copy. This appendix will show you how to download R as well as RStudio, a software application that makes R easier to use. You’ll go from downloading R to opening your first R session.\nBoth R and RStudio are free and easy to download.\nR comes preinstalled on many Linux systems, but you’ll want the newest version of R if yours is out of date. The CRAN website provides files to build R from source on Debian, Redhat, SUSE, and Ubuntu systems under the link “Download R for Linux.” Click the link and then follow the directory trail to the version of Linux you wish to install on. The exact installation procedure will vary depending on the Linux system you use. CRAN guides the process by grouping each set of source files with documentation or README files that explain how to install on your system.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Installing R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "apendices/a1-starting.html#using-r",
+    "href": "apendices/a1-starting.html#using-r",
+    "title": "Appendix A — Installing R and RStudio",
+    "section": "A.1 Using R",
+    "text": "A.1 Using R\nR isn’t a program that you can open and start using, like Microsoft Word or Internet Explorer. Instead, R is a computer language, like C, C++, or UNIX. You use R by writing commands in the R language and asking your computer to interpret them. In the old days, people ran R code in a UNIX terminal window—as if they were hackers in a movie from the 1980s. Now almost everyone uses R with an application called RStudio, and I recommend that you do, too.\n\n\n\n\n\n\nR and UNIX\n\n\n\nYou can still run R in a UNIX or BASH window by typing the command:\n$ R\nwhich opens an R interpreter. You can then do your work and close the interpreter by running q() when you are finished.\n\n\n\n\n\n\n\n\nDo I still need to download R?\n\n\n\nEven if you use RStudio, you’ll still need to download R to your computer. RStudio helps you use the version of R that lives on your computer, but it doesn’t come with a version of R on its own.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Installing R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "apendices/a1-starting.html#opening-r",
+    "href": "apendices/a1-starting.html#opening-r",
+    "title": "Appendix A — Installing R and RStudio",
+    "section": "A.2 Opening R",
+    "text": "A.2 Opening R\nNow that you have both R and RStudio on your computer, you can begin using R by opening the RStudio program. Open RStudio just as you would any program, by clicking on its icon or by typing “RStudio” at the Windows Run prompt.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Installing R and RStudio</span>"
+    ]
+  }
+]
