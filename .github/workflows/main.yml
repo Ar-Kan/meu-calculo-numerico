@@ -23,6 +23,10 @@ jobs:
           # To install LaTeX to build PDF book
           tinytex: true
 
+      # NOTE: This needs to be run only once
+      - name: Setup GitHub Pages Branch
+        run: quarto publish gh-pages
+
       # NOTE: If Publishing to GitHub Pages, set the permissions correctly (see top of this yaml)
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
