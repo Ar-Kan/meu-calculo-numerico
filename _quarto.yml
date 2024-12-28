@@ -7,7 +7,7 @@ language: helpers/custom.yml
 strip-comments: true
 bibliography: referencias.bib
 date: last-modified
-date-format: "D MMMM YYYY"
+date-format: "D/MM/YYYY"
 filters:
   - helpers/mathpunctuation.lua
 
@@ -23,7 +23,7 @@ book:
   title: "Meu Cálculo Numérico"
   subtitle: "Um livro colaborativo"
   date: today
-  date-format: "D MMMM YYYY"
+  date-format: "D/MM/YYYY"
   author:
     - Arquimedes Macedo
     - REAMAT
