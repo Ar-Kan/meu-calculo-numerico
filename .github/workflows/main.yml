@@ -17,10 +17,12 @@ jobs:
       
       - name: Install LaTeX (for PDF generation)
         run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-xetex texlive-luatex
-          tlmgr init-usertree
-          xargs -a helpers/latex/packages sudo tlmgr install
+          choco install miktex --params "/JustMe /NoShortcuts /UseAdmin" -y
+          refreshenv
+          miktexsetup finish
+          initexmf --update-fndb
+          initexmf --mklinks
+          xargs -a helpers/latex/packages miktexsetup --install
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
