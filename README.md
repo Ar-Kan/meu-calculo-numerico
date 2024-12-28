@@ -6,32 +6,14 @@ Um exemplo de livro escrito em Markdown, para ser convertido para HTML.
 
 Para compilar o livro execute:
 
-    $ quarto render
+```bash
+quarto render
+```
 
 ## Como escrever o livro
 
 Cada capítulo é um arquivo Markdown e, sempre que um novo capítulo for adicionado, deve ser
 devidamente referenciado no arquivo `_quarto.yml`.
-
-### Estrutura de diretórios
-
-O livro é organizado da seguinte forma:
-
-    .
-    ├── README.md
-    ├── _quarto.yml
-    ├── index.qmd
-    ├── introducao.qmd
-    ├── prefacio.qmd
-    ├── referencias.bib
-    ├── capitulos/
-    │   ├── 01_aritmetica/
-    │   │   ├── 00_capitulo.qmd
-    │   │   ├── 01_secao.qmd
-    │   │   |   ...
-    ├── apendices/
-    │   |   ...
-    |   ...
 
 ### Usar referências
 
@@ -59,17 +41,59 @@ $$
 $${#eq-cos-x}
 ```
 
-### Exemplo de aplicações
+### Exemplos e exercícios resolvidos
 
-Para inserir exemplos de aplicações de métodos numéricos
+Para inserir exemplos de aplicações de métodos numéricos:
 
-### Exercícios resolvidos
-
-Para inserir exercícios resolvidos
+```markdown
+    ::: {.callout-note}
+    ### Exemplo
+    
+    O número $293$ é decomposto como:
+    
+    $$
+    \begin{split}
+      293 &= 2\ \text{centenas} + 9\ \text{dezenas }+ 3\ \text{unidades}\\
+      &= 2\cdot 10^2+9\cdot 10^1+3\cdot 10^0.
+    \end{split}
+    $${#eq-exemplo-1-sistema-de-numeracao}
+    :::
+```
 
 ### Exercícios propostos
 
-Para inserir exercícios propostos
+Para inserir exercícios propostos deve ser feito o seguinte:
+
+```markdown
+    ## Exercícios
+
+    ### Exercício
+    
+    Descrição do exercício.
+    
+    ::: {.callout-warning .mt-0 collapse="true"}
+    ### Resposta
+    
+    Esta resposta irá ficar oculta até que o leitor clique no botão.
+    :::
+    
+    ### Exercício
+    
+    Outro exercício.
+    
+    ::: {.callout-tip .mt-0}
+    ### Dica
+    
+    Alguma dica para resolver o exercício.
+    :::
+    
+    ::: {.callout-warning .mt-0 collapse="true"}
+    ### Resposta
+    
+    Esta resposta irá ficar oculta até que o leitor clique no botão.
+    :::
+
+```
 
 ### Exemplo de código
 

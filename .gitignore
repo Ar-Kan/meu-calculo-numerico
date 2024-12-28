@@ -1,4 +1,13 @@
-*.
+.*
 !.gitignore
 *.html
 !helpers/**/*.html
+*.aux
+*.log
+*.out
+*.idx
+*.toc
+
+/.quarto/
+/site_libs/
+/web/

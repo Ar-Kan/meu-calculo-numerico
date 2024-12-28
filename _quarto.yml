@@ -2,20 +2,21 @@ project:
   type: book
   output-dir: web
 
-#strip-comments: true
+strip-comments: true
 bibliography: referencias.bib
 lang: pt-BR
-#date: last-modified
+date: last-modified
 date-format: "D MMMM YYYY"
-#filters:
-#  - helpers/mathpunctuation.lua
+filters:
+  - helpers/mathpunctuation.lua
 
-#crossref:
-#  fig-prefix: ""
-#  eq-prefix: ""
-#  sec-prefix: ""
-#  def-prefix: ""
-#  tbl-prefix: ""
+crossref:
+  chapters: true
+  fig-prefix: ""
+  eq-prefix: ""
+  sec-prefix: ""
+  def-prefix: ""
+  tbl-prefix: ""
 
 book:
   title: "Meu Cálculo Numérico"
@@ -32,14 +33,14 @@ book:
   repo-actions: [edit, issue]
   sharing: [twitter, facebook, linkedin]
   downloads: pdf
-#  open-graph: true
-#  reader-mode: true
+  open-graph: true
+  reader-mode: true
   sidebar:
-#    title: "Meu Cálculo Numérico <br>
-#    <span style=\"color: gray; font-size: 0.8rem;\">{{< meta date >}}</span><br>
-#    [<span style=\"color: gray; font-size: 0.7rem; text-decoration: underline;\">CC-BY-SA 3.0</span>](https://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR)<br>"
+    title: "Meu Cálculo Numérico <br>
+    <span style=\"color: gray; font-size: 0.8rem;\">{{< meta date >}}</span><br>
+    [<span style=\"color: gray; font-size: 0.7rem; text-decoration: underline;\">CC-BY-SA 3.0</span>](https://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR)<br>"
     align: left
-    collapse-level: 2
+#    collapse-level: 2
   page-footer:
     left: |
       <a href="https://www.ufrgs.br/reamat/CalculoNumerico/index.html">REAMAT</a>
@@ -59,20 +60,20 @@ format:
   html:
     cover-image: jumbotron.jpg
     favicon: favicon.ico
-#    email-obfuscation: references
-#    code-link: true
-#    link-external-icon: false
-#    link-external-newwindow: true
-#    number-sections: true
-#    toc: true
-#    collapse: true
-#    html-math-method: mathjax
-#    include-in-header: helpers/html/header-includes.html
-#    reference-location: margin
-#    citation-location: margin
-#    toc-location: right
-#    toc-expand: true
-#    css: helpers/html/styles.css
+    email-obfuscation: references
+    code-link: true
+    link-external-icon: false
+    link-external-newwindow: true
+    number-sections: true
+    toc: true
+    collapse: true
+    html-math-method: mathjax
+    include-in-header: helpers/html/header-includes.html
+    reference-location: margin
+    citation-location: margin
+    toc-location: right
+    toc-expand: true
+    css: helpers/html/styles.css
     theme:
       light:
         - flatly
@@ -80,11 +81,13 @@ format:
         - darkly
     fig-width: 5
     fig-height: 5
-    fig-align: left
+    fig-align: center
 
   pdf:
+    keep-tex: false
+    pdf-engine: lualatex
     title: "Meu Cálculo Numérico"
-#    subtitle: "Um livro colaborativo"
+    subtitle: "Um livro colaborativo"
     documentclass: book
     geometry:
       - paperwidth=8.00in
@@ -101,5 +104,4 @@ format:
     colorlinks: true
     fig-width: 5
     fig-height: 5
-    fig-align: left
-    keep-tex: true
+    fig-align: center

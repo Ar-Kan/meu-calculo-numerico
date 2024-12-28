@@ -1,32 +1,60 @@
-# Representação de números e aritmética de máquina {#sec-representacao-de-numeros}
-
-Neste capítulo, abordaremos formas de representar números reais em computadores.
-Iniciamos com uma discussão sobre representação posicional e mudança de base. Então, enfatizaremos
-a representação de números com quantidade finita de dígitos, mais especificamente, as representações
-de números inteiros, ponto fixo e ponto flutuante em computadores.
-
-A representação de números e a aritmética em computadores levam aos chamados erros de arredondamento e de
-truncamento. Ao final deste capítulo, abordaremos os efeitos do erro de arredondamento na computação científica.
-
 ## Sistema de numeração e mudança de base {#sec-sistema-de-numeracao-e-mudanca-de-base}
 
 Usualmente, utilizamos o sistema de numeração decimal, isto é, base 10, para representar números. Esse é um sistema de numeração
 em que a posição do algarismo indica a potência de $10$ pela qual seu valor é multiplicado.
 
-::: {.panel-tabset}
 
+::: {.callout-note}
+### Exemplo
+
+O número $293$ é decomposto como:
+
+$$
+\begin{split}
+  293 &= 2\ \text{centenas} + 9\ \text{dezenas }+ 3\ \text{unidades}\\
+  &= 2\cdot 10^2+9\cdot 10^1+3\cdot 10^0.
+\end{split}
+$${#eq-exemplo-1-sistema-de-numeracao}
+:::
+
+O sistema de numeração posicional também pode ser usado com outras bases. Vejamos a seguinte definição.
+
+### Sistema de numeração de base $b$
+
+Dado um número natural $b>1$ e o conjunto de símbolos $\pmb{\pm},  \pmb{0}, \pmb{1}, \pmb{2},\dotsc, \pmb{b-1}$
+^[Para $b>10$, veja @tip-obs_sistema_de_numeracao.], a sequência de símbolos
+
+$$
+  \left(d_nd_{n-1} \cdots d_1d_0,d_{-1}d_{-2} \cdots \right)_b
+$$
+
+representa o número positivo
+
+$$
+  d_n\cdot b^n + d_{n-1}\cdot b^{n-1} + \cdots + d_0\cdot b^0 + d_{-1}\cdot b^{-1}+d_{-2}\cdot b^{-2} + \cdots
+$$
+
+Para representar números negativos usamos o símbolo $-$ à esquerda do numeral^[O uso do símbolo $+$ é opcional na representação de números positivos.].
+
+::: {#tip-obs_sistema_de_numeracao .callout-note}
+### Observação
+
+Para sistemas de numeração com base $b \geq 10$ é usual utilizar as seguintes notações:
+
+- No sistema de numeração decimal ($b=10$), costumamos representar o número sem os parênteses e o subíndice, ou seja,
+  $$
+  \pm d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots := \pm (d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots)_{10}.
+  $$
+- Se $b>10$, usamos as letras $A, B, C, \cdots$ para denotar os algarismos: $A=10$, $B=11$, $C=12$, $D=13$, $E=14$, $F=15$.
+
+:::
+
+::: {.panel-tabset}
 ### Python
 
 ```python
 >>> 1*2**3 + 0*2**2 + 0*2**1 + 1*2**0 + 1*2**-1 + 0*2**-2 + 1*2**-3
 9.625
-```
-
-### Octave
-
-```octave
->> 1*2^3 + 0*2^2 + 0*2^1 + 1*2^0 + 1*2^-1 + 0*2^-2 + 1*2^-3
-ans =  9.6250
 ```
 
 ### Scilab
@@ -36,18 +64,46 @@ ans =  9.6250
 ans =  9.6250
 ```
 
+### Octave
+
+```octave
+>> 1*2^3 + 0*2^2 + 0*2^1 + 1*2^0 + 1*2^-1 + 0*2^-2 + 1*2^-3
+ans =  9.6250
+```
 :::
 
 ## Exercícios
 
-::: {.callout-important icon="false"}
 ### Exercício
 
-Navigate to the Help file for `splm` by running `?splm` or by visiting [this link](https://usepa.github.io/spmodel/reference/splm.html) and scroll down to "Details." Examine the spatial linear model description in the Help file and relate some of the syntax used to the syntax in @eq-splm and @eq-Rpoint.
-:::
+Escreva cada número dado para a base $b$.
 
-::: {.callout-important icon="false" collapse="true"}
+a) $(45,1)_8$ para a base $b=2$
+a) $(21,2)_8$ para a base $b=16$
+a) $(1001,101)_2$ para a base $b=8$
+a) $(1001,101)_2$ para a base $b=16$
+
+::: {.callout-warning .mt-0 collapse="true"}
 ### Resposta
 
-The form of the spatial linear model ($\mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \boldsymbol{\tau} + \boldsymbol{\epsilon}$) is the same in the Help file as the form in Equation @eq-splm. In the help file, $de$ refers to $\sigma^2_{de}$, $ie$ refers to $\sigma^2_{ie}$, and $range$ refers to $\phi$. Finally, in the help file $h$ refers to distance between observations while, in @eq-Rpoint, $\mathbf{H}$ refers to a matrix of these distances for all pairs of observations.
+a) ~$(100101,001)_2$
+a) ~$(11,4)_{16}$
+a) ~$(11,5)_8$
+a) ~$(9,A)_{16}$
+:::
+
+### Exercício
+
+Quantos algarismos são necessários para representar o número $937163832173947$ em base binária? E em base 7?
+
+::: {.callout-tip .mt-0}
+### Dica
+
+Qual é o menor e o maior inteiro que pode ser escrito em dada base com $N$ algarismos?
+:::
+
+::: {.callout-warning .mt-0 collapse="true"}
+### Resposta
+
+$50$; $18$.
 :::
