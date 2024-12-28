@@ -5,7 +5,7 @@ boa leitura desta versão do livro. O material aqui apresentado, é uma adaptaç
 ## Sobre a linguagem Python
 
 [Python](https://www.python.org/) é uma linguagem de programação de alto nível, interpretada e multi-paradigma.
-Lançada por [Guido van Rossum](https://gvanrossum.github.io//)[^Guido van Rossum, nascido em 1956, programador de computadores dos Países Baixos.] em 1991 é, atualmente, mantida de forma colaborativa e aberta.
+Lançada por [Guido van Rossum](https://gvanrossum.github.io//)^[Guido van Rossum, nascido em 1956, programador de computadores dos Países Baixos.] em 1991 é, atualmente, mantida de forma colaborativa e aberta.
 
 Para mais informações, consulte:
 
