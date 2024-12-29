@@ -72,20 +72,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      displayMath: [ ['S$','S$'], ["\\[","\\]"] ]
-      processEscapes: true
-    }
-  });
+<script type="text/javascript">
+  document.documentElement.setAttribute("lang", "pt-BR");
+  document.documentElement.setAttribute("xml:lang", "pt-BR");
 </script>
 
 
 <meta property="og:title" content="Meu Cálculo Numérico">
 <meta property="og:description" content="Um livro colaborativo">
-<meta property="og:image" content="https://www.ufrgs.br/reamat/CalculoNumerico/livro-py/main.html/jumbotron.jpg">
+<meta property="og:image" content="https://ar-kan.github.io/meu-calculo-numerico/jumbotron.jpg">
 <meta property="og:site_name" content="Meu Cálculo Numérico">
 </head>
 
@@ -113,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Meu Cálculo Numérico <br> <span style="color: gray; font-size: 0.8rem;">28/12/2024</span><br> </a><a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR"><span style="color: gray; font-size: 0.7rem; text-decoration: underline;">CC-BY-SA 3.0</span></a><br> 
+      <a href="./">Meu Cálculo Numérico <br> <span style="color: gray; font-size: 0.8rem;">29/12/2024</span> <br> </a><a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR"><span style="color: gray; font-size: 0.7rem; text-decoration: underline;">CC-BY-SA 3.0</span></a><br> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/Ar-Kan/meu-calculo-numerico" title="Código fonte" class="quarto-navigation-tool px-1" aria-label="Código fonte"><i class="bi bi-github"></i></a>
     <a href="./Meu-Cálculo-Numérico.pdf" title="Baixar PDF" class="quarto-navigation-tool px-1" aria-label="Baixar PDF"><i class="bi bi-file-pdf"></i></a>
@@ -247,7 +242,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">28/12/2024</p>
+      <p class="date">29/12/2024</p>
     </div>
   </div>
   
@@ -520,7 +515,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/www\.ufrgs\.br\/reamat\/CalculoNumerico\/livro-py\/main\.html");
+      var filterRegex = new RegExp("https:\/\/ar-kan\.github\.io\/meu-calculo-numerico\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
