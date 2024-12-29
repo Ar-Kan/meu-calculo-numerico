@@ -1,3 +1,13 @@
+-- This Lua script defines a table of functions to be used with Pandoc for processing elements in a document.
+-- The functions are designed to handle specific types of elements and apply custom styles to them.
+
+-- The first function handles elements of type "Quoted". If any of the content within the quoted element is of type "Math",
+-- it wraps the entire quoted element in a Pandoc Span with an inline-block display style.
+
+-- The second function processes paragraphs ("Para"). It iterates through the content of the paragraph and looks for elements of type "Math".
+-- If a "Math" element is found, it checks the surrounding elements. If the next element is a string ("Str"), it combines the "Math" element
+-- and the string into a single Span with an inline-block display style. This ensures that mathematical expressions are displayed inline
+-- with the surrounding text.
 return {
     { Quoted = function(elem)
         for _, el in ipairs(elem.content) do

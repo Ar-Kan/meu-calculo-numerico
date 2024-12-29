@@ -11,22 +11,21 @@ date-format: D/MM/YYYY
 filters:
   - helpers/mathpunctuation.lua
 
-crossref:
-  chapters: true
-  fig-prefix: ""
-  eq-prefix: ""
-  sec-prefix: ""
-  def-prefix: ""
-  tbl-prefix: ""
-
 book:
   title: Meu Cálculo Numérico
   subtitle: Um livro colaborativo
   date: today
   date-format: D/MM/YYYY
   author:
-    - Arquimedes Macedo
-    - REAMAT
+    - name: Arquimedes Macedo
+      email: arquimedes.macedo@ufrgs.br
+      corresponding: true
+      affiliations:
+        - Instituto de Matemática e Estatística — IME/UFRGS
+    - name: REAMAT
+      email: ime@ufrgs.br
+      affiliations:
+        - Instituto de Matemática e Estatística — IME/UFRGS
   cover-image: jumbotron.jpg
   repo-url: https://github.com/Ar-Kan/meu-calculo-numerico
   site-url: https://ar-kan.github.io/meu-calculo-numerico/
@@ -63,7 +62,7 @@ format:
   html:
     cover-image: jumbotron.jpg
     favicon: favicon.ico
-    email-obfuscation: references
+    email-obfuscation: javascript
     code-link: true
     link-external-icon: false
     link-external-newwindow: true
@@ -92,19 +91,38 @@ format:
     fig-align: center
 
   pdf:
-    keep-tex: false
     pdf-engine: lualatex
+    documentclass: scrreprt
+    classoption:
+      - oneside
+    keep-tex: false
+    latex-clean: true
+    reference-location: margin # footnotes in margin
+    link-citations: true # citations link to references
+    links-as-notes: true # turn URLs into sidenotes
+    papersize: a4
     title: Meu Cálculo Numérico
     subtitle: Um livro colaborativo
-    documentclass: book
     geometry:
-      - paperwidth=8.00in
-      - paperheight=10.00in
-      - left=1.25in
-      - textwidth= 5.25in
-      - top=1.00in
-      - textheight=8.25in
-      #- showframe # For debugging
+      #- showframe # NOTE: For debugging
+
+      # - paperwidth=8.00in
+      # - paperheight=10.00in
+      # - left=1.25in
+      # - textwidth= 5.25in
+      # - top=1.00in
+      # - textheight=8.25in
+
+      # NOTE: Bigger margins
+      - top=2cm
+      - bottom=2cm
+      - head=1cm
+      - foot=1cm
+      - left=2cm
+      - marginparwidth=4cm
+      - textwidth=12cm
+      - marginparsep=1cm
+      - bindingoffset=0.5cm
     toc: true
     colorlinks: true
     fig-width: 5
