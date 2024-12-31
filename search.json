@@ -74,7 +74,7 @@
     "href": "capitulos/01_aritmetica/01_sistema_de_numeracao.html",
     "title": "1  Sistema de numeração e mudança de base",
     "section": "",
-    "text": "1.0.1 Sistema de numeração de base \\(b\\)\nUsualmente, utilizamos o sistema de numeração decimal, isto é, base 10, para representar números. Esse é um sistema de numeração em que a posição do algarismo indica a potência de \\(10\\) pela qual seu valor é multiplicado.\nO sistema de numeração posicional também pode ser usado com outras bases. Vejamos a seguinte definição.\nDado um número natural \\(b&gt;1\\) e o conjunto de símbolos \\(\\pmb{\\pm},  \\pmb{0}, \\pmb{1}, \\pmb{2},\\dotsc, \\pmb{b-1}\\) 1, a sequência de símbolos\n\\[\n  \\left(d_nd_{n-1} \\cdots d_1d_0,d_{-1}d_{-2} \\cdots \\right)_b\n\\]\nrepresenta o número positivo\n\\[\n  d_n\\cdot b^n + d_{n-1}\\cdot b^{n-1} + \\cdots + d_0\\cdot b^0 + d_{-1}\\cdot b^{-1}+d_{-2}\\cdot b^{-2} + \\cdots\n\\]\nPara representar números negativos usamos o símbolo \\(-\\) à esquerda do numeral2.",
+    "text": "1.1 Exercícios\nUsualmente, utilizamos o sistema de numeração decimal, isto é, base 10, para representar números. Esse é um sistema de numeração em que a posição do algarismo indica a potência de \\(10\\) pela qual seu valor é multiplicado.\nO sistema de numeração posicional também pode ser usado com outras bases. Vejamos a seguinte definição.",
     "crumbs": [
       "Capítulo 1: Representação de números e aritmética de máquina",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sistema de numeração e mudança de base</span>"
@@ -84,8 +84,8 @@
     "objectID": "capitulos/01_aritmetica/01_sistema_de_numeracao.html#exercícios",
     "href": "capitulos/01_aritmetica/01_sistema_de_numeracao.html#exercícios",
     "title": "1  Sistema de numeração e mudança de base",
-    "section": "1.1 Exercícios",
-    "text": "1.1 Exercícios\n\n1.1.1 Exercício\nEscreva cada número dado para a base \\(b\\).\n\n\\((45,1)_8\\) para a base \\(b=2\\)\n\\((21,2)_8\\) para a base \\(b=16\\)\n\\((1001,101)_2\\) para a base \\(b=8\\)\n\\((1001,101)_2\\) para a base \\(b=16\\)\n\n\n\n\n\n\n\nResposta\n\n\n\n\n\n\n~\\((100101,001)_2\\)\n~\\((11,4)_{16}\\)\n~\\((11,5)_8\\)\n~\\((9,A)_{16}\\)\n\n\n\n\n\n\n1.1.2 Exercício\nQuantos algarismos são necessários para representar o número \\(937163832173947\\) em base binária? E em base 7?\n\n\n\n\n\n\nDica\n\n\n\nQual é o menor e o maior inteiro que pode ser escrito em dada base com \\(N\\) algarismos?\n\n\n\n\n\n\n\n\nResposta\n\n\n\n\n\n\\(50\\); \\(18\\).",
+    "section": "",
+    "text": "1.1.1 Exercício\nEscreva cada número dado para a base \\(b\\).\n\n\\((45,1)_8\\) para a base \\(b=2\\)\n\\((21,2)_8\\) para a base \\(b=16\\)\n\\((1001,101)_2\\) para a base \\(b=8\\)\n\\((1001,101)_2\\) para a base \\(b=16\\)\n\n\n\n\n\n\n\nResposta\n\n\n\n\n\n\n~\\((100101,001)_2\\)\n~\\((11,4)_{16}\\)\n~\\((11,5)_8\\)\n~\\((9,A)_{16}\\)\n\n\n\n\n\n\n1.1.2 Exercício\nQuantos algarismos são necessários para representar o número \\(937163832173947\\) em base binária? E em base 7?\n\n\n\n\n\n\nDica\n\n\n\nQual é o menor e o maior inteiro que pode ser escrito em dada base com \\(N\\) algarismos?\n\n\n\n\n\n\n\n\nResposta\n\n\n\n\n\n\\(50\\); \\(18\\).",
     "crumbs": [
       "Capítulo 1: Representação de números e aritmética de máquina",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sistema de numeração e mudança de base</span>"

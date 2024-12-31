@@ -75,8 +75,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-747f6828a98f640ce0736befa612b8a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-add7d06ce1cd5469bd78fb11be552c06.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-fc2dc880086b72f8dd691f704075bc86.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-f1421f3ead4330852bc0dfcfc4d91cf7.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -168,7 +168,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../">Meu Cálculo Numérico <br> <span style="color: gray; font-size: 0.8rem;">29/12/2024</span> <br> </a><a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR"><span style="color: gray; font-size: 0.7rem; text-decoration: underline;">CC-BY-SA 3.0</span></a><br> 
+      <a href="../../">Meu Cálculo Numérico <br> <span style="color: gray; font-size: 0.8rem;">31/12/2024</span> <br> </a><a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR"><span style="color: gray; font-size: 0.7rem; text-decoration: underline;">CC-BY-SA 3.0</span></a><br> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/Ar-Kan/meu-calculo-numerico" title="Código fonte" class="quarto-navigation-tool px-1" aria-label="Código fonte"><i class="bi bi-github"></i></a>
     <a href="../../Meu-Cálculo-Numérico.pdf" title="Baixar PDF" class="quarto-navigation-tool px-1" aria-label="Baixar PDF"><i class="bi bi-file-pdf"></i></a>
@@ -273,8 +273,7 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#sistema-de-numeração-de-base-b" id="toc-sistema-de-numeração-de-base-b" class="nav-link active" data-scroll-target="#sistema-de-numeração-de-base-b"><span class="header-section-number">1.0.1</span> Sistema de numeração de base <span class="math inline">\(b\)</span></a></li>
-  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">1.1</span> Exercícios</a>
+  <li><a href="#exercícios" id="toc-exercícios" class="nav-link active" data-scroll-target="#exercícios"><span class="header-section-number">1.1</span> Exercícios</a>
   <ul class="collapse">
   <li><a href="#exercício" id="toc-exercício" class="nav-link" data-scroll-target="#exercício"><span class="header-section-number">1.1.1</span> Exercício</a></li>
   <li><a href="#exercício-1" id="toc-exercício-1" class="nav-link" data-scroll-target="#exercício-1"><span class="header-section-number">1.1.2</span> Exercício</a></li>
@@ -298,7 +297,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">29/12/2024</p>
+      <p class="date">31/12/2024</p>
     </div>
   </div>
   
@@ -322,27 +321,48 @@ Exemplo
 </div>
 <div class="callout-body-container callout-body">
 <p>O número <span style="display:inline-block;"><span class="math inline">\(293\)</span></span> é decomposto como:</p>
+<div aria-hidden="true">
 <p><span id="eq-exemplo-1-sistema-de-numeracao"><span class="math display">\[
 \begin{split}
   293 &amp;= 2\ \text{centenas} + 9\ \text{dezenas }+ 3\ \text{unidades}\\
-  &amp;= 2\cdot 10^2+9\cdot 10^1+3\cdot 10^0.
+  &amp;= 2\cdot 10^2+9\cdot 10^1+3\cdot 10^0
 \end{split}
 \qquad(1.1)\]</span></span></p>
 </div>
+<div class="sr-only">
+<p>293 é igual a 2 centenas mais 9 dezenas mais 3 unidades. Que também é igual a 2 vezes 10 elevado à potência 2, mais 9 vezes 10 elevado à potência 1, mais 3 vezes 10 elevado à potência 0</p>
+</div>
+</div>
 </div>
 <p>O sistema de numeração posicional também pode ser usado com outras bases. Vejamos a seguinte definição.</p>
-<section id="sistema-de-numeração-de-base-b" class="level3 page-columns page-full" data-number="1.0.1">
-<h3 data-number="1.0.1" class="anchored" data-anchor-id="sistema-de-numeração-de-base-b"><span class="header-section-number">1.0.1</span> Sistema de numeração de base <span class="math inline">\(b\)</span></h3>
-<p>Dado um número natural <span style="display:inline-block;"><span class="math inline">\(b&gt;1\)</span></span> e o conjunto de símbolos <span style="display:inline-block;"><span class="math inline">\(\pmb{\pm},  \pmb{0}, \pmb{1}, \pmb{2},\dotsc, \pmb{b-1}\)</span></span> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, a sequência de símbolos</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Para <span style="display:inline-block;"><span class="math inline">\(b&gt;10\)</span>,</span> veja <a href="#tip-obs_sistema_de_numeracao" class="quarto-xref">Tip&nbsp;<span>1.1</span></a>.</p></div></div><p><span class="math display">\[
-  \left(d_nd_{n-1} \cdots d_1d_0,d_{-1}d_{-2} \cdots \right)_b
-\]</span></p>
-<p>representa o número positivo</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Sistema de numeração de base <span class="math inline">\(b\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dado um número natural <span style="display:inline-block;"><span class="math inline">\(b&gt;1\)</span></span> e o conjunto de símbolos <span role="math" aria-label="O símbolo mais ou o menos, o 0, o 1, o 2, e assim por diante, até b menos 1"> <span class="math inline">\(\pmb{\pm},  \pmb{0}, \pmb{1}, \pmb{2},\dotsc, \pmb{b-1}\)</span> </span> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, a sequência de símbolos</p>
+<div role="math" aria-label="Representação simbólica de um número na base b: uma sequência de dígitos, começando pelos dígitos da posição mais significativa à esquerda, d subíndice n, d subíndice n menos 1, até d subíndice 1 e d subíndice 0, seguidos por uma vírgula, e depois os dígitos das posições fracionárias, começando de d subíndice menos 1, d subíndice menos 2, e assim por diante">
+<div aria-hidden="true">
 <p><span class="math display">\[
-  d_n\cdot b^n + d_{n-1}\cdot b^{n-1} + \cdots + d_0\cdot b^0 + d_{-1}\cdot b^{-1}+d_{-2}\cdot b^{-2} + \cdots
+\left(d_nd_{n-1} \cdots d_1d_0,d_{-1}d_{-2} \cdots \right)_b
 \]</span></p>
+</div>
+</div>
+<p>representa o número positivo</p>
+<div role="math" aria-label="Representação simbólica de um número na base b expandido como uma soma ponderada dos dígitos multiplicados por potências da base: começando pelos dígitos da posição mais significativa à esquerda, d subíndice n vezes b elevado à n, mais d subíndice n menos 1 vezes b elevado à n menos 1, e assim por diante, até d subíndice 0 vezes b elevado na 0, mais d subíndice menos 1 vezes b elevado na menos 1, mais d subíndice menos 2 vezes b elevado na menos 2, e assim por diante">
+<p><span class="math display">\[
+d_n\cdot b^n + d_{n-1}\cdot b^{n-1} + \cdots + d_0\cdot b^0 + d_{-1}\cdot b^{-1}+d_{-2}\cdot b^{-2} + \cdots
+\]</span></p>
+</div>
 <p>Para representar números negativos usamos o símbolo <span style="display:inline-block;"><span class="math inline">\(-\)</span></span> à esquerda do numeral<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;O uso do símbolo <span style="display:inline-block;"><span class="math inline">\(+\)</span></span> é opcional na representação de números positivos.</p></div></div><div id="tip-obs_sistema_de_numeracao" class="callout callout-style-default callout-note callout-titled">
+</div>
+</div>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;O uso do símbolo <span style="display:inline-block;"><span class="math inline">\(+\)</span></span> é opcional na representação de números positivos.</p></div></div><div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Para <span style="display:inline-block;"><span class="math inline">\(b&gt;10\)</span>,</span> veja <a href="#tip-obs_sistema_de_numeracao" class="quarto-xref">Tip&nbsp;<span>1.1</span></a>.</p></div></div><div id="tip-obs_sistema_de_numeracao" class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -354,9 +374,14 @@ Nota&nbsp;1.1: Observação
 <div class="callout-body-container callout-body">
 <p>Para sistemas de numeração com base <span style="display:inline-block;"><span class="math inline">\(b \geq 10\)</span></span> é usual utilizar as seguintes notações:</p>
 <ul>
-<li>No sistema de numeração decimal (<span class="math inline">\(b=10\)</span>), costumamos representar o número sem os parênteses e o subíndice, ou seja, <span class="math display">\[
-\pm d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots := \pm (d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots)_{10}.
-\]</span></li>
+<li>No sistema de numeração decimal (<span class="math inline">\(b=10\)</span>), costumamos representar o número sem os parênteses e o subíndice, ou seja,</li>
+</ul>
+<div role="math" aria-label="">
+<p><span class="math display">\[
+  \pm d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots := \pm (d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots)_{10}
+  \]</span></p>
+</div>
+<ul>
 <li>Se <span class="math inline">\(b&gt;10\)</span>, usamos as letras <span class="math inline">\(A, B, C, \cdots\)</span> para denotar os algarismos: <span class="math inline">\(A=10\)</span>, <span class="math inline">\(B=11\)</span>, <span class="math inline">\(C=12\)</span>, <span class="math inline">\(D=13\)</span>, <span class="math inline">\(E=14\)</span>, <span class="math inline">\(F=15\)</span>.</li>
 </ul>
 </div>
@@ -378,7 +403,6 @@ Nota&nbsp;1.1: Observação
 </div>
 </div>
 </div>
-</section>
 <section id="exercícios" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">1.1</span> Exercícios</h2>
 <section id="exercício" class="level3" data-number="1.1.1">
@@ -391,7 +415,7 @@ Nota&nbsp;1.1: Observação
 <li><span class="math inline">\((1001,101)_2\)</span> para a base <span class="math inline">\(b=16\)</span></li>
 </ol>
 <div class="mt-0 callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -400,7 +424,7 @@ Resposta
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li>~<span class="math inline">\((100101,001)_2\)</span></li>
@@ -429,7 +453,7 @@ Dica
 </div>
 </div>
 <div class="mt-0 callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -438,7 +462,7 @@ Resposta
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math inline">\(50\)</span>; <span style="display:inline-block;"><span class="math inline">\(18\)</span>.</span></p>
 </div>
