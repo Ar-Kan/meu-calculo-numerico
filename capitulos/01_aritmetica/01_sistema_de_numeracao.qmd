@@ -10,12 +10,13 @@ em que a posição do algarismo indica a potência de $10$ pela qual seu valor �
 O número $293$ é decomposto como:
 
 <div aria-hidden="true">
-$$
-\begin{split}
-  293 &= 2\ \text{centenas} + 9\ \text{dezenas }+ 3\ \text{unidades}\\
-  &= 2\cdot 10^2+9\cdot 10^1+3\cdot 10^0
-\end{split}
-$${#eq-exemplo-1-sistema-de-numeracao}
+\begin{equation}
+  \label{eq:exemplo-1-sistema-de-numeracao}
+  \begin{split}
+    293 &= 2\ \text{centenas} + 9\ \text{dezenas }+ 3\ \text{unidades}\\
+    &= 2\cdot 10^2+9\cdot 10^1+3\cdot 10^0
+  \end{split}
+\end{equation}
 </div>
 
 <div class="sr-only">
