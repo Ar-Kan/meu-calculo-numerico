@@ -9,6 +9,7 @@ em que a posição do algarismo indica a potência de $10$ pela qual seu valor �
 
 O número $293$ é decomposto como:
 
+<div role="math" aria-label="293 é igual a 2 centenas mais 9 dezenas mais 3 unidades. Que também é igual a 2 vezes 10 elevado à potência 2, mais 9 vezes 10 elevado à potência 1, mais 3 vezes 10 elevado à potência 0">
 <div aria-hidden="true">
 \begin{equation}
   \label{eq:exemplo-1-sistema-de-numeracao}
@@ -22,6 +23,7 @@ O número $293$ é decomposto como:
 <div class="sr-only">
 293 é igual a 2 centenas mais 9 dezenas mais 3 unidades. Que também é igual a 2 vezes 10 elevado à potência 2, mais 9 vezes 10 elevado à potência 1, mais 3 vezes 10 elevado à potência 0
 </div>
+</div>
 :::
 
 O sistema de numeração posicional também pode ser usado com outras bases. Vejamos a seguinte definição.
@@ -31,42 +33,65 @@ O sistema de numeração posicional também pode ser usado com outras bases. Vej
 
 Dado um número natural $b>1$ e o conjunto de símbolos
 <span role="math" aria-label="O símbolo mais ou o menos, o 0, o 1, o 2, e assim por diante, até b menos 1">
+<span aria-hidden="true">
 $\pmb{\pm},  \pmb{0}, \pmb{1}, \pmb{2},\dotsc, \pmb{b-1}$
+</span>
 </span>
 ^[Para $b>10$, veja @tip-obs_sistema_de_numeracao.], a sequência de símbolos
 
 <div role="math" aria-label="Representação simbólica de um número na base b: uma sequência de dígitos, começando pelos dígitos da posição mais significativa à esquerda, d subíndice n, d subíndice n menos 1, até d subíndice 1 e d subíndice 0, seguidos por uma vírgula, e depois os dígitos das posições fracionárias, começando de d subíndice menos 1, d subíndice menos 2, e assim por diante">
 <div aria-hidden="true">
-$$
-\left(d_nd_{n-1} \cdots d_1d_0,d_{-1}d_{-2} \cdots \right)_b
-$$
+\begin{equation}
+  \left(d_nd_{n-1} \cdots d_1d_0,d_{-1}d_{-2} \cdots \right)_b
+\end{equation}
 </div>
 </div>
 
 representa o número positivo
 
 <div role="math" aria-label="Representação simbólica de um número na base b expandido como uma soma ponderada dos dígitos multiplicados por potências da base: começando pelos dígitos da posição mais significativa à esquerda, d subíndice n vezes b elevado à n, mais d subíndice n menos 1 vezes b elevado à n menos 1, e assim por diante, até d subíndice 0 vezes b elevado na 0, mais d subíndice menos 1 vezes b elevado na menos 1, mais d subíndice menos 2 vezes b elevado na menos 2, e assim por diante">
-$$
-d_n\cdot b^n + d_{n-1}\cdot b^{n-1} + \cdots + d_0\cdot b^0 + d_{-1}\cdot b^{-1}+d_{-2}\cdot b^{-2} + \cdots
-$$
+<div aria-hidden="true">
+\begin{equation}
+  d_n\cdot b^n + d_{n-1}\cdot b^{n-1} + \cdots + d_0\cdot b^0 + d_{-1}\cdot b^{-1}+d_{-2}\cdot b^{-2} + \cdots
+\end{equation}
+</div>
 </div>
 
 Para representar números negativos usamos o símbolo $-$ à esquerda do numeral^[O uso do símbolo $+$ é opcional na representação de números positivos.].
 :::
 
-::: {#tip-obs_sistema_de_numeracao .callout-note}
-### Observação
+::: {#tip-obs_sistema_de_numeracao .callout-tip}
+### Observação ($b \ge 10$)
 
 Para sistemas de numeração com base $b \geq 10$ é usual utilizar as seguintes notações:
 
 - No sistema de numeração decimal ($b=10$), costumamos representar o número sem os parênteses e o subíndice, ou seja,
 
 <div role="math" aria-label="">
-  $$
-  \pm d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots := \pm (d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots)_{10}
-  $$
+<div aria-hidden="true">
+\begin{equation}
+  \pm d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots := \pm (d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots)_{10}.
+\end{equation}
+</div>
 </div>
 - Se $b>10$, usamos as letras $A, B, C, \cdots$ para denotar os algarismos: $A=10$, $B=11$, $C=12$, $D=13$, $E=14$, $F=15$.
+:::
+
+::: {.callout-note}
+### Exemplo (Sistema binário)
+
+O sistema de numeração em base dois é chamado de binário e os algarismos binários são conhecidos como
+_bits_ (do inglês *binary digits*). Um _bit_ pode assumir dois valores distintos: $0$ ou $1$. Por exemplo:
+
+\begin{equation}
+  \begin{split}
+    x &= (1001,101)_{2} \\
+    &= 1\cdot 2^3 +0\cdot 2^2 +0\cdot 2^1 +1\cdot 2^0  +1\cdot 2^{-1} +0\cdot 2^{-2} +1\cdot 2^{-3} \\
+    &= 8+0+0+1+ 0,5+0+0,125 = 9,625.
+  \end{split}
+\end{equation}
+
+Ou seja, $(1001,101)_{2}$ é igual a $9,625$ no sistema decimal.
 :::
 
 ::: {.panel-tabset}
@@ -92,7 +117,513 @@ ans =  9.6250
 ```
 :::
 
+::: {.callout-note}
+### Exemplo (Sistema quaternário)
+
+No sistema quaternário a base $b$ é igual a $4$ e, portanto, temos o seguinte conjunto de algarismos $\{0, 1, 2, 3\}$. Por exemplo:
+\begin{equation}
+  (301,2)_{4}=3\cdot 4^2+0\cdot 4^1+1\cdot 4^0+2\cdot 4^{-1}=49,5.
+\end{equation}
+Verifique no computador!
+:::
+
+::: {.callout-note}
+### Exemplo (Sistema octal)
+
+No sistema octal a base é $b=8$. Por exemplo:
+\begin{equation}
+  \begin{split}
+    (1357,24)_{8}&= 1\cdot 8^3+3\cdot 8^2+5\cdot 8^1+7\cdot 8^{0}+2\cdot 8^{-1}+4\cdot 8^{-2}\\
+    &= 512+192+40+7+0,25+0,0625=751,3125.
+  \end{split}
+\end{equation}
+Verifique no computador!
+:::
+
+::: {.callout-note}
+### Exemplo (Sistema hexadecimal)
+
+O sistema de numeração cuja base é $b=16$ é chamado de sistema hexadecimal. Neste, temos
+o conjunto de algarismos $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F\}$. Convertendo o número $(E2AC)_{16}$ para a base $10$ temos
+
+\begin{equation}
+  \begin{split}
+  (E2AC)_{16} &= 14\cdot 16^3+2\cdot 16^2+10\cdot 16^1+12\cdot 16^{0}\\
+  &=57344+512+160+12=58028.
+  \end{split}
+\end{equation}
+
+Verifique no computador!
+:::
+
+As linguagens oferecem algumas funções para a conversão de números inteiros em dada base para a base decimal. Por exemplo, temos:
+
+::: {.panel-tabset}
+### Python
+
+```python
+>>> print(0b1001)  # bin
+9
+>>> print(0o157)  # oct
+111
+>>> print(0xbeba)  # hex
+48826
+```
+
+### Scilab
+
+```scilab
+-->bin2dec('1001')
+ ans  =
+    9.
+-->hex2dec('451')
+ ans  =
+    1105.
+-->oct2dec('157')
+ ans  =
+    111.
+-->base2dec('BEBA',16)
+ ans  =
+    48826.
+```
+
+### Octave
+
+```octave
+>> bin2dec('1001')
+ans =  9
+>> hex2dec('451')
+ans =  1105
+>> base2dec('157',8) #oct -> dec
+ans =  111
+>> base2dec('BEBA',16)
+ans =  48826
+```
+:::
+
+Nos exemplos acima vimos como converter números representados em um sistema de numeração de base $b$ para o sistema decimal.
+Agora, vamos estudar como fazer o processo inverso. Isto é, dado um número decimal $(X)_{10}$ queremos escrevê-lo
+em uma outra base $b$, isto é, queremos obter a seguinte representação:
+
+\begin{equation}
+  \begin{split}
+    (X)_{10} &= (d_nd_{n-1}\cdots d_0,d_{-1}\cdots)_{b} \\
+    &= d_n\cdot b^{n}+d_{n-1}\cdot b^{n-1}+\cdots + d_0\cdot b^0+d_{-1}\cdot b^{-1}+d_{-2}\cdot b^{-2}+\cdots
+  \end{split}
+\end{equation}
+
+Separando as partes inteira e fracionária de $X$, isto é, $X = X^{\mbox{i}} + X^{\mbox{f}}$, temos
+\begin{equation}
+X^{\mbox{i}} = d_n\cdot b^{n}+ \cdots+d_{n-1}b^{n-1} \cdots  +d_1\cdot b^1 +d_0\cdot b^0
+\end{equation}
+e
+\begin{equation}
+  X^{\mbox{f}} = \frac{d_{-1}}{b^1} + \frac{d_{-2}}{b^{2}} + \cdots
+\end{equation}
+Nosso objetivo é determinar os algarismos $\{d_n, d_{n-1}, ...\}$.
+
+Primeiramente, vejamos como tratar a parte inteira $X^{\mbox{i}}$. Calculando o quociente de $X^{\mbox{i}}$ por $b$, temos:
+
+\begin{equation}
+  \frac{X^{\mbox{i}}}{b}=   \frac{d_0}{b}+d_1+d_2\cdot b^1+\cdots+d_{n-1}\cdot b^{n-2} +d_n\cdot b^{n-1}.
+\end{equation}
+
+Observe que $d_0$ é o resto da divisão de $X^{\mbox{i}}$ por $b$, pois
+$d_1+d_2\cdot b^1+\cdots+d_{n-1}\cdot b^{n-2} +d_n\cdot b^{n-1}$ é inteiro e $\frac{d_0}{b}$ é uma fração com $d_0<b$.
+Da mesma forma, o resto da divisão de $d_1+d_2\cdot b^1+\cdots+d_{n-1}\cdot b^{n-2} +d_n\cdot b^{n-1}$ por $b$ é $d_1$.
+Ou seja, repetindo este processo encontramos os algarismos $d_0$, $d_1$, $d_2$, $\ldots$, $d_n$.
+
+Vamos, agora, converter a parte fracionária $X^{\mbox{f}}$ do número decimal $X$ para o sistema de base $b$. Multiplicando $X^{\mbox{f}}$ por $b$, temos
+
+\begin{equation}
+  bX^{\mbox{f}}=d_{-1}+\frac{d_{-2}}{b}+\frac{d_{-3}}{b^2}+\cdots
+\end{equation}
+
+Observe que a parte inteira desse produto é $d_{-1}$ e $\frac{d_{-2}}{b}+\frac{d_{-3}}{b^2}+\cdots$ é a parte fracionária.
+Quando multiplicamos $\frac{d_{-2}}{b}+\frac{d_{-3}}{b^2}+\cdots$ por $b$ novamente, encontramos $d_{-2}$.
+Repetindo este processo encontramos os demais algarismos.
+
+::: {.callout-note}
+### Exemplo
+
+Vamos converter o número $9,625$ para a base binária ($b=2$). Primeiramente, decompomos $9,625$ na soma de suas partes inteira e fracionária.
+\begin{equation}
+  9,625 = 9 + 0,625
+\end{equation}
+
+*Conversão da parte inteira*. Para converter a parte inteira, fazemos sucessivas divisões por $b=2$ obtendo
+\begin{align}
+9 &= 4\cdot 2 + 1\\
+&= (2\cdot 2 + 0)\cdot 2 + 1\\
+&= 2^3 + 1.
+\end{align}
+Ou seja, temos que $9 = (1001)_2$.
+:::
+
+Podemos usar os comandos para truncamento e resto da divisão para computar esta conversão da seguinte forma
+
+::: {.panel-tabset}
+### Python
+
+```python
+>>> x = 9
+>>> d0 = x%2; x = int(x/2); print(f"d0 = {d0}, x = {x}")
+d0 = 1, x = 4
+>>> d1 = x%2; x = int(x/2); print(f"d1 = {d1}, x = {x}")
+d1 = 0, x = 2
+>>> d2 = x%2; x = int(x/2); print(f"d2 = {d2}, x = {x}")
+d2 = 0, x = 1
+>>> d3 = x%2; x = int(x/2); print(f"d3 = {d3}, x = {x}")
+d3 = 1, x = 0
+```
+
+### Scilab
+
+```scilab
+-->x = 9
+ x  =
+    9.
+-->d0 = modulo(x,2), x = fix(x/2)
+ d0  =
+    1.
+ x  =
+    4.
+-->d1 = modulo(x,2), x = fix(x/2)
+ d1  =
+    0.
+ x  =
+    2.
+-->d2 = modulo(x,2), x = fix(x/2)
+ d2  =
+    0.
+ x  =
+    1.
+-->d3 = modulo(x,2), x = fix(x/2)
+ d3  =
+    1.
+ x  =
+    0.
+```
+
+### Octave
+
+```octave
+>> x = 9
+x =  9
+>> d0 = mod(x,2), x = fix(x/2)
+d0 =  1
+x =  4
+>> d1 = mod(x,2), x = fix(x/2)
+d1 = 0
+x =  2
+>> d2 = mod(x,2), x = fix(x/2)
+d2 = 0
+x =  1
+>> d3 = mod(x,2), x = fix(x/2)
+d3 =  1
+x = 0
+```
+:::
+
+*Conversão da parte fracionária*. Para converter a parte fracionária, fazemos sucessivas multiplicações por $b=2$ obtendo
+
+\begin{align}
+  0,625 &= 1,25\cdot 2^{-1} = 1\cdot 2^{-1} + 0,25\cdot 2^{-1}\\
+  &= 1\cdot 2^{-1} + (0,5\cdot 2^{-1})\cdot 2^{-1} = 1\cdot 2^{-1} + 0,5\cdot 2^{-2}\\
+  &= 1\cdot 2^{-1} + (1\cdot 2^{-1})\cdot 2^{-2} = 1\cdot 2^{-1} + 1\cdot 2^{-3}.
+\end{align}
+
+Ou seja, temos que $0,625 = (0,101)_2$.
+
+Podemos computar esta conversão da parte fracionária da seguinte forma
+
+::: {.panel-tabset}
+### Python
+
+```python
+>>> x=0.625
+>>> d = int(2*x); x = 2*x - d; print("d = %d, x = %f" % (d,x))
+d = 1, x = 0.250000
+>>> d = int(2*x); x = 2*x - d; print("d = %d, x = %f" % (d,x))
+d = 0, x = 0.500000
+>>> d = int(2*x); x = 2*x - d; print("d = %d, x = %f" % (d,x))
+d = 1, x = 0.000000
+```
+
+### Scilab
+
+```scilab
+-->x = 0.625
+ x  =
+    0.625
+-->d = fix(2*x), x = 2*x - d
+ d  =
+    1.
+ x  =
+    0.25
+-->d = fix(2*x), x = 2*x - d
+ d  =
+    0.
+ x  =
+    0.5
+-->d = fix(2*x), x = 2*x - d
+ d  =
+    1.
+ x  =
+    0.
+```
+
+### Octave
+
+```octave
+>> x = 0.625
+x =  0.62500
+>> d = fix(2*x), x = 2*x - d
+d =  1
+x =  0.25000
+>> d = fix(2*x), x = 2*x - d
+d = 0
+x =  0.50000
+>> d = fix(2*x), x = 2*x - d
+d =  1
+x = 0
+```
+:::
+
+*Conclusão*. Da conversão das partes inteira e fracionária de $9,625$, obtemos $9 = (1001)_2$ e $0,625 = (0,101)_2$.
+Logo, concluímos que $9,625 = (1001,101)_2$.
+
+::: {.callout-tip}
+### Observação
+
+Existem algumas funções para a conversão de números inteiros em base decimal para uma dada base. Por exemplo, temos:
+:::
+
+::: {.panel-tabset}
+### Python
+
+```python
+>>> print(bin(9))
+0b1001
+>>> print(oct(111))
+0o157
+>>> print(hex(48826))
+0xbeba
+```
+
+### Scilab
+
+```scilab
+-->dec2base(9,2)
+ ans  =
+ 1001
+-->dec2base(111,8)
+ ans  =
+ 157
+-->dec2base(48826,16)
+ ans  =
+ BEBA
+```
+
+### Octave
+
+```octave
+>> dec2base(9,2)
+ans = 1001
+>> dec2base(111,8)
+ans = 157
+>> dec2base(48826,16)
+ans = BEBA
+```
+:::
+
+
+::: {.callout-tip}
+### Observação
+
+Uma maneira de converter um número dado em uma base $b_1$ para uma base $b_2$ é fazer em duas partes:
+primeiro converter o número dado na base $b_1$ para base decimal e depois converter para a base $b_2$.
+:::
+
+
+## Exercícios resolvidos
+
+
+### Exercício
+
+Obtenha a representação do número $125,58\bar{3}$ na base $6$.
+
+
+::: {.callout-warning .mt-0 collapse="true"}
+### Resposta
+
+Decompomos $125,58\bar{3}$ nas suas partes inteira $125$ e fracionária $0,58\bar{3}$. Então, convertemos cada parte.
+
+*Conversão da parte inteira*. Vamos escrever o número $125$ na base $6$.
+Para tanto, fazemos sucessivas divisões por $6$ como segue:
+
+\begin{equation}
+  \begin{split}
+    125 &= 20\cdot 6 + 5\quad(\mbox{$125$ dividido por $6$ é igual a $20$ e resta $5$})\\
+    &= (3\cdot 6 + 2)\cdot 6 + 5 = 3\cdot 6^2 + 2\cdot 6 + 5,
+  \end{split}
+\end{equation}
+
+logo $125 = (325)_6$.
+
+Estes cálculos podem ser feitos da seguinte forma: primeiro calcula o resto da divisão entre dois números, depois retorna a parte inteira de um número dado. No nosso exemplo, temos:
+
+
+::: {.panel-tabset}
+### Python
+
+```python
+>>> q = 125; d0 = (q % 6); print(q,d0)
+>>> q = int(q/6); d1 = (q % 6); print(q,d1)
+>>> q = int(q/6); d2 = (q % 6); print(q,d2)
+```
+
+### Scilab
+
+```scilab
+-->q = 125, d0 = modulo(q,6)
+-->q = int(q/6), d1 = modulo(q,6)
+-->q = int(q/6), d2 = modulo(q,6)
+```
+
+### Octave
+
+```octave
+>> x = 125
+x =  125
+>> d = mod(x,6), x = fix(x/6)
+d =  5
+x =  20
+>> d = mod(x,6), x = fix(x/6)
+d =  2
+x =  3
+>> d = mod(x,6), x = fix(x/6)
+d =  3
+x = 0
+```
+:::
+
+Verifique!
+
+*Conversão da parte fracionária*. Para converter $0,58\bar{3}$ para a base $6$, fazemos sucessivas multiplicações por $6$ como segue:
+
+\begin{equation}
+  \begin{split}
+  0,58\overline{3} &= 3,5\cdot 6^{-1}\quad(\mbox{$0,58\overline{3}$ multiplicado por $6$ é igual a $3,5$})\\
+  &= 3\cdot 6^{-1} + 0,5\cdot 6^{-1}\\
+  &= 3\cdot 6^{-1} + (3\cdot 6^{-1})\cdot 6^{-1}\\
+  &= 3\cdot 6^{-1} + 3\cdot 6^{-2},
+  \end{split}
+\end{equation}
+
+logo $0,58\overline{3} = (0,33)_6$.
+
+::: {.panel-tabset}
+### Python
+
+```python
+>>> x = 0.58 + 1/3/100; print("x = {}".format(x))
+x = 0.5833333333333333
+>>> d = int(6*x); x = round(6*x,1) - d; print("d = {}, x = {}".format(d, x))
+d = 3, x = 0.5
+>>> d = int(6*x); x = round(6*x,1) - d; print("d = {}, x = {}".format(d, x))
+d = 3, x = 0.0
+```
+
+### Scilab
+
+```scilab
+# As contas feitas aqui, também podem ser computadas no Scilab. Você sabe como?
+```
+
+### Octave
+
+```octave
+>> x = 0.58 + 1/3/100
+x =  0.58333
+>> d = fix(6*x), x = 6*x - d
+d =  3
+x =  0.50000
+>> x = 0.5 #isso é realmente necessário?
+x =  0.50000
+>> d = fix(6*x), x = 6*x - d
+d =  3
+x = 0
+```
+:::
+
+:::
+
+
+### Exercício
+
+Obtenha a representação na base $4$ do número $(101,01)_2$.
+
+::: {.callout-warning .mt-0 collapse="true"}
+### Resposta
+
+Começamos convertendo $(101,01)_2$ para a base decimal:
+
+\begin{equation}
+  (101,01)_2 = 1\cdot 2^2 + 1\cdot 2^0 + 1\cdot 2^{-2} = 5,25.
+\end{equation}
+
+Então, convertemos $5,25$ para a base $4$. Para sua parte inteira, temos
+
+\begin{equation}
+  5 = 1\cdot 4 + 1 = (11)_4.
+\end{equation}
+
+Para sua parte fracionária, temos
+
+\begin{equation}
+  0,25 = 1\cdot 4^{-1} = (0,1)_4.
+\end{equation}
+
+Logo, $(101,01)_2 = (11,1)_4$. Verifique estas contas no computador!
+:::
+
+
 ## Exercícios
+
+### Exercício
+
+Converta para base decimal cada um dos seguintes números:
+
+a) $(100)_2$
+a) $(100)_3$
+a) $(100)_b$
+a) $(12)_5$
+a) $(AA)_{16}$
+a) $(7,1)_8$
+a) $(3,12)_5$
+
+::: {.callout-warning .mt-0 collapse="true"}
+### Resposta
+
+a) ~$4$
+a) ~$9$
+a) ~$b^2$
+a) ~$7$
+a) ~$170$
+a) ~$7,125$
+a) ~$3,28$
+
+:::
+
+
+
+
+
+
+
+
+
 
 ### Exercício
 

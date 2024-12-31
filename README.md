@@ -24,12 +24,25 @@ Neste exemplo, a referência é feita à:
 
 ```bibtex
 @book{press2007numerical,
-  title={Numerical recipes 3rd edition: The art of scientific computing},
-  author={Press, William H and Teukolsky, Saul A and Vetterling, William T and Flannery, Brian P},
-  year={2007},
-  publisher={Cambridge university press}
+    title = {Numerical recipes 3rd edition: The art of scientific computing},
+    author = {Press, William H and Teukolsky, Saul A and Vetterling, William T and Flannery, Brian P},
+    year = {2007},
+    publisher = {Cambridge university press}
 }
 ```
+
+## Estilização
+
+O Quarto, através do Bootstrap, oferece uma série de estilos para o texto. Dentre eles, blocos para chamar a atenção do leitor, como dicas, notas, alertas, etc.
+
+ Utilização     | Classe            | Cor do bloco 
+----------------|-------------------|--------------
+ Bloco genérico | `callout`         | Cinza        
+ Dica           | `callout-tip`     | Verde        
+ Nota           | `callout-note`    | Azul         
+ Alerta         | `callout-warning` | Amarelo      
+ Atenção        | `callout-caution` | Laranja      
+ Perigo         | `callout-danger`  | Vermelho     
 
 ### Enumeração de equações
 
@@ -47,58 +60,66 @@ As equações são numeradas automaticamente caso sejam escritas entre
 As equações não devem ser definidas entre `$$`, caso contrário, a numeração irá ser
 diferente para estas equações.
 
+### Observações
+
+Para inserir exemplos de aplicações de métodos numéricos:
+
+```markdown
+::: {.callout-tip}
+
+### Observação
+
+Descrição da observação.
+:::
+```
+
 ### Exemplos e exercícios resolvidos
 
 Para inserir exemplos de aplicações de métodos numéricos:
 
 ```markdown
-    ::: {.callout-note}
-    ### Exemplo
+::: {.callout-note}
 
-    O número $293$ é decomposto como:
+### Exemplo
 
-    $$
-    \begin{split}
-      293 &= 2\ \text{centenas} + 9\ \text{dezenas }+ 3\ \text{unidades}\\
-      &= 2\cdot 10^2+9\cdot 10^1+3\cdot 10^0.
-    \end{split}
-    $${#eq-exemplo-1-sistema-de-numeracao}
-    :::
+Descrição do exemplo.
+:::
 ```
 
 ### Exercícios propostos
 
 Para inserir exercícios propostos deve ser feito o seguinte:
 
+#### Descrição
+
 ```markdown
-    ## Exercícios
+## Exercícios
 
-    ### Exercício
+### Exercício
 
-    Descrição do exercício.
+Descrição do exercício.
+```
 
-    ::: {.callout-warning .mt-0 collapse="true"}
-    ### Resposta
+#### Dica
 
-    Esta resposta irá ficar oculta até que o leitor clique no botão.
-    :::
+```markdown
+::: {.callout-tip .mt-0}
 
-    ### Exercício
+### Dica
 
-    Outro exercício.
+Alguma dica para resolver o exercício.
+:::
+```
 
-    ::: {.callout-tip .mt-0}
-    ### Dica
+#### Resposta
 
-    Alguma dica para resolver o exercício.
-    :::
+```markdown
+::: {.callout-warning .mt-0 collapse="true"}
 
-    ::: {.callout-warning .mt-0 collapse="true"}
-    ### Resposta
+### Resposta
 
-    Esta resposta irá ficar oculta até que o leitor clique no botão.
-    :::
-
+Esta resposta irá ficar oculta até que o leitor clique no botão.
+:::
 ```
 
 ### Exemplo de código
@@ -108,25 +129,25 @@ seguinte forma:
 
 ```markdown
     ::: {.panel-tabset}
-
+    
     ## Python
-
+    
     ```python
     print("Hello, World!")
     ```
-
+    
     ## R
-
+    
     ```r
     print("Hello, World!")
     ```
-
+    
     ## Scilab
-
+    
     ```
     disp("Hello, World!")
     ```
-
+    
     :::
 ```
 
