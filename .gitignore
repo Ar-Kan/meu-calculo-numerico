@@ -11,3 +11,5 @@
 /.quarto/
 /site_libs/
 /web/
+
+/.luarc.json

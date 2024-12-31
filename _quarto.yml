@@ -8,8 +8,6 @@ strip-comments: true
 bibliography: referencias.bib
 date: last-modified
 date-format: D/MM/YYYY
-filters:
-  - helpers/mathpunctuation.lua
 
 book:
   title: Meu Cálculo Numérico

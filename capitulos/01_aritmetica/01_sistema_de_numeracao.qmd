@@ -9,32 +9,50 @@ em que a posição do algarismo indica a potência de $10$ pela qual seu valor �
 
 O número $293$ é decomposto como:
 
-$$
-\begin{split}
-  293 &= 2\ \text{centenas} + 9\ \text{dezenas }+ 3\ \text{unidades}\\
-  &= 2\cdot 10^2+9\cdot 10^1+3\cdot 10^0.
-\end{split}
-$${#eq-exemplo-1-sistema-de-numeracao}
+<div aria-hidden="true">
+\begin{equation}
+  \label{eq:exemplo-1-sistema-de-numeracao}
+  \begin{split}
+    293 &= 2\ \text{centenas} + 9\ \text{dezenas }+ 3\ \text{unidades}\\
+    &= 2\cdot 10^2+9\cdot 10^1+3\cdot 10^0
+  \end{split}
+\end{equation}
+</div>
+
+<div class="sr-only">
+293 é igual a 2 centenas mais 9 dezenas mais 3 unidades. Que também é igual a 2 vezes 10 elevado à potência 2, mais 9 vezes 10 elevado à potência 1, mais 3 vezes 10 elevado à potência 0
+</div>
 :::
 
 O sistema de numeração posicional também pode ser usado com outras bases. Vejamos a seguinte definição.
 
+::: callout-tip
 ### Sistema de numeração de base $b$
 
-Dado um número natural $b>1$ e o conjunto de símbolos $\pmb{\pm},  \pmb{0}, \pmb{1}, \pmb{2},\dotsc, \pmb{b-1}$
+Dado um número natural $b>1$ e o conjunto de símbolos
+<span role="math" aria-label="O símbolo mais ou o menos, o 0, o 1, o 2, e assim por diante, até b menos 1">
+$\pmb{\pm},  \pmb{0}, \pmb{1}, \pmb{2},\dotsc, \pmb{b-1}$
+</span>
 ^[Para $b>10$, veja @tip-obs_sistema_de_numeracao.], a sequência de símbolos
 
+<div role="math" aria-label="Representação simbólica de um número na base b: uma sequência de dígitos, começando pelos dígitos da posição mais significativa à esquerda, d subíndice n, d subíndice n menos 1, até d subíndice 1 e d subíndice 0, seguidos por uma vírgula, e depois os dígitos das posições fracionárias, começando de d subíndice menos 1, d subíndice menos 2, e assim por diante">
+<div aria-hidden="true">
 $$
-  \left(d_nd_{n-1} \cdots d_1d_0,d_{-1}d_{-2} \cdots \right)_b
+\left(d_nd_{n-1} \cdots d_1d_0,d_{-1}d_{-2} \cdots \right)_b
 $$
+</div>
+</div>
 
 representa o número positivo
 
+<div role="math" aria-label="Representação simbólica de um número na base b expandido como uma soma ponderada dos dígitos multiplicados por potências da base: começando pelos dígitos da posição mais significativa à esquerda, d subíndice n vezes b elevado à n, mais d subíndice n menos 1 vezes b elevado à n menos 1, e assim por diante, até d subíndice 0 vezes b elevado na 0, mais d subíndice menos 1 vezes b elevado na menos 1, mais d subíndice menos 2 vezes b elevado na menos 2, e assim por diante">
 $$
-  d_n\cdot b^n + d_{n-1}\cdot b^{n-1} + \cdots + d_0\cdot b^0 + d_{-1}\cdot b^{-1}+d_{-2}\cdot b^{-2} + \cdots
+d_n\cdot b^n + d_{n-1}\cdot b^{n-1} + \cdots + d_0\cdot b^0 + d_{-1}\cdot b^{-1}+d_{-2}\cdot b^{-2} + \cdots
 $$
+</div>
 
 Para representar números negativos usamos o símbolo $-$ à esquerda do numeral^[O uso do símbolo $+$ é opcional na representação de números positivos.].
+:::
 
 ::: {#tip-obs_sistema_de_numeracao .callout-note}
 ### Observação
@@ -42,11 +60,13 @@ Para representar números negativos usamos o símbolo $-$ à esquerda do numeral
 Para sistemas de numeração com base $b \geq 10$ é usual utilizar as seguintes notações:
 
 - No sistema de numeração decimal ($b=10$), costumamos representar o número sem os parênteses e o subíndice, ou seja,
-  $$
-  \pm d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots := \pm (d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots)_{10}.
-  $$
-- Se $b>10$, usamos as letras $A, B, C, \cdots$ para denotar os algarismos: $A=10$, $B=11$, $C=12$, $D=13$, $E=14$, $F=15$.
 
+<div role="math" aria-label="">
+  $$
+  \pm d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots := \pm (d_nd_{n-1}\ldots d_1d_0,d_{-1}d_{-2}\ldots)_{10}
+  $$
+</div>
+- Se $b>10$, usamos as letras $A, B, C, \cdots$ para denotar os algarismos: $A=10$, $B=11$, $C=12$, $D=13$, $E=14$, $F=15$.
 :::
 
 ::: {.panel-tabset}

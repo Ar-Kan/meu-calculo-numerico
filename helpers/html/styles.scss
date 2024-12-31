@@ -2,3 +2,18 @@
 p {
   text-align: justify;
 }
+
+/*
+  * Hide an element to all devices except screen readers
+  * See: https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+  */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
